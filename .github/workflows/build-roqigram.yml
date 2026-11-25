@@ -64,6 +64,9 @@ jobs:
           SIGNING_KEY_STORE_PASSWORD = ${{ env.STORE_PASS }}
           EOF
 
+      - name: Install image tooling for icon generation
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq webp librsvg2-bin
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
