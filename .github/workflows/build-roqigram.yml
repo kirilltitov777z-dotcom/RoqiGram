@@ -84,6 +84,9 @@ jobs:
         run: ./gradlew :TMessagesProj:generateAppIcons --stacktrace
 
       - name: Build universal APK (Full Afat)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew :TMessagesProj:assembleFullAfatRelease --stacktrace
 
       - name: Upload APK artifact
