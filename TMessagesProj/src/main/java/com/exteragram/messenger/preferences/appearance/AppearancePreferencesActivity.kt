@@ -522,7 +522,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
             .setMessage(text)
             .setPositiveButton("Копировать") { _, _ ->
                 val cm = ctx.getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
-                cm.primaryClip = android.content.ClipData.newPlainText("RoqiGram", text)
+                cm.setPrimaryClip(android.content.ClipData.newPlainText("RoqiGram", text))
             }
             .setNegativeButton("OK", null)
             .show()
