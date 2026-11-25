@@ -1,100 +1,58 @@
-<p align="center">
-  <img src="TMessagesProj/src/main/res-appicons/mipmap-xxxhdpi/ic_launcher.webp" width="96" alt="exteraGram">
-</p>
+# RoqiGram
 
-<h1 align="center">exteraGram</h1>
+Fork of [exteraGram](https://github.com/exteraSquad/exteraGram), GPLv3.
+Package name and `applicationId` are intentionally unchanged so plugins and
+signing stay compatible.
 
-<p align="center">
-  A third-party Telegram client for Android, built on the
-  <a href="https://github.com/DrKLO/Telegram">official sources</a>.
-</p>
+**Repository:** https://github.com/kirilltitov777z-dotcom/RoqiGram
 
-<p align="center">
-  <a href="https://t.me/exteraGram"><img src="https://img.shields.io/badge/Channel-Telegram-blue.svg" alt="Channel"></a>
-  <a href="https://t.me/exteraChat"><img src="https://img.shields.io/badge/Chat-Telegram-blue.svg" alt="Chat"></a>
-  <a href="https://t.me/exteraReleases"><img src="https://img.shields.io/badge/Download-Telegram-blue.svg" alt="Download"></a>
-  <a href="https://crowdin.com/project/exteralocales"><img src="https://img.shields.io/badge/Translate-Crowdin-green.svg" alt="Crowdin"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-orange.svg" alt="License"></a>
-</p>
+## What is in this tree now
 
-## What it adds
+- Rebranding: app name, preferences title and About string.
+- 10 Roqi icons added to the exteraGram icon generator
+  (`TMessagesProj/appicons/icons.json` + `appicons/roqi/`). Icon 1 is the
+  default; icons 4–10 are hidden in the picker unless Premium is active.
+- Premium core (`RoqiPremium.java`): offline HMAC key validation, `RF`/`RM`
+  prefixes, activation binding to Telegram id + HWID, monthly expiry,
+  revocation list, admin-only key generation, status text.
+- Settings entry: Appearance → RoqiGram Premium with activation dialog.
+  Admin id `8835641983` opens a key-issuing dialog.
+- 3 plugins under `roqigram-plugins/` (New Year, Fake NFT, Nick FX).
+- Profile sync bot skeleton under `roqigram-sync-bot/` (aiogram + SQLite).
+- Premium badge artwork in `roqigram-assets/`.
+- CI: `.github/workflows/build-roqigram.yml`.
 
-- Plugins written in Python that can hook into the app, with their own settings and an SDK
-  ([`plugins-pysdk`](plugins-pysdk/README.md)).
-- Material You themes, icon packs and alternative app icons.
-- A long list of interface and chat options that the official client does not have.
+## Build
 
-Releases are published in [@exteraReleases](https://t.me/exteraReleases).
+Secrets in the repository: `API_ID`, `API_HASH`, `MAPS_V2_API`.
+If the release keystore is not provided, CI generates a temporary one so the
+build is reproducible. For a production build set `SIGNING_KEY_STORE_BASE64`,
+`SIGNING_KEY_ALIAS`, `SIGNING_KEY_PASSWORD`, `SIGNING_KEY_STORE_PASSWORD`.
 
-## Editions
+```bash
+./gradlew :TMessagesProj:assembleFullAfatRelease
+```
 
-| Flavor | What is inside                                              | ABIs                                  |
-|--------|-------------------------------------------------------------|---------------------------------------|
-| `full` | Everything, including the Python runtime and plugins        | `armeabi-v7a`, `arm64-v8a`            |
-| `lite` | The same client without Python, plugins and method hooking  | `armeabi-v7a`, `arm64-v8a`, `x86`, `x86_64` |
+## Premium keys
 
-The second flavor dimension picks the ABI: `armv7`, `arm64`, `x86`, `x64`, or `afat` for a universal
-ARM build. `beta` is a universal ARM build with beta naming.
+`RF-XXXX-XXXX-XXXX-XXXX` — Forever, 50 ₽, no expiry.
+`RM-XXXX-XXXX-XXXX-XXXX` — Monthly, 10 ₽/month, 1/3/6/12 months.
 
-## Building
+12 random chars from a 32-character alphabet without `0/O/1/I`, plus 4 hex
+chars of `HMAC-SHA256(body12 + prefix, ROQI_SECRET)`. Validation is offline.
+Both tiers unlock the same set of features immediately; there is no staged
+rollout.
 
-### Requirements
+Keys are issued only by admin id `8835641983`, in Settings → Appearance →
+RoqiGram Premium → Admin. Purchase contact: @Cafulu.
 
-- Android Studio with support for Android Gradle Plugin 9.1, or just JDK 17 and the command line
-- Android SDK 36 and NDK 29.0.14206865
-- Python 3.11 for the `full` flavor, on `PATH` as `python3.11` or set as `python.build` in
-  `local.properties`
+## Honest status
 
-### Steps
-
-1. Clone the repository with its submodules:
-   ```bash
-   git clone --recursive --shallow-submodules https://github.com/exteraSquad/exteraGram.git
-   ```
-   If you cloned without `--recursive`:
-   ```bash
-   git submodule update --init --recursive --depth=1
-   ```
-2. Create a file named `API_KEYS` in the repository root:
-   ```
-   APP_ID = 123456
-   APP_HASH = "abcdef0123456789abcdef0123456789"
-   MAPS_V2_API = your-google-maps-key
-
-   SIGNING_KEY_PASSWORD = key-password
-   SIGNING_KEY_ALIAS = key-alias
-   SIGNING_KEY_STORE_PASSWORD = keystore-password
-   ```
-   Get your own `APP_ID` and `APP_HASH` at <https://core.telegram.org/api/obtaining_api_id> and a
-   Maps key in the [Google Cloud console](https://console.cloud.google.com/google/maps-apis/credentials).
-   Do not ship builds with someone else's keys.
-3. [Generate a signing key](https://developer.android.com/studio/publish/app-signing#generate-key)
-   and save the keystore as `TMessagesProj/config/exteraGram.jks`. Debug builds are signed with it
-   too.
-4. Build:
-   ```bash
-   ./gradlew :TMessagesProj:assembleFullArm64Debug
-   ```
-   The APK appears in `TMessagesProj/build/outputs/apk/`. Other variants follow the same pattern:
-   `assembleLiteArm64Release`, `assembleFullAfatRelease`, `assembleFullBetaDebug`.
-
-A `full` build compiles the plugins SDK from `plugins-pysdk/` and downloads a prebuilt plugin
-analyzer from GitHub; the analyzer is cached in `Tools/temp` for offline builds.
-
-## Translations
-
-Telegram's own strings come from the
-[official translations](https://translations.telegram.org/en/android/). Strings that exist only in
-exteraGram are translated on [Crowdin](https://crowdin.com/project/exteralocales).
-
-## Thanks
-
-- [Telegram for Android](https://github.com/DrKLO/Telegram)
-- [Catogram](https://github.com/Catogram/Catogram)
-- [Nekogram](https://gitlab.com/Nekogram/Nekogram)
-- [OwlGram](https://github.com/OwlGramDev/OwlGram)
+The 136-item specification is a multi-iteration task. This commit contains
+the foundation, rebranding, all 10 icons, Premium core and three plugins —
+not all 136 features. See `docs/PREMIUM.md` for the security model and the
+work that remains.
 
 ## License
 
-[GNU General Public License v3.0 or later](LICENSE), with [additional terms](ADDITIONAL_TERMS.md)
-about attribution and the use of the exteraGram name and logo.
+GPLv3, same as exteraGram. Keep this repository public.
