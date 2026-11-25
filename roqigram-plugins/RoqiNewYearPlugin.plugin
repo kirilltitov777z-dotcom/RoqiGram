@@ -1,0 +1,59 @@
+from base_plugin import BasePlugin
+from hook_utils import get_method
+from ui.settings import Switch, Selector, Header, Text, Divider
+from java import jclass
+
+__id__ = "roqigram_newyear"
+__name__ = "Roqi New Year"
+__description__ = "Snowfall, holiday header and rotating icons in MD3 palette."
+__author__ = "RoqiGram"
+__version__ = "1.0.0"
+__icon__ = "exteraPlugins/1"
+__app_version__ = ">=13.2.1"
+__sdk_version__ = ">=1.4.6.4"
+
+
+class RoqiNewYearPlugin(BasePlugin):
+    def on_plugin_load(self):
+        if self.get_setting("snow_nick", False) and self.is_premium():
+            try:
+                self.snow_handle = self.hook_call_site(
+                    get_method("org.telegram.ui.Cells.DialogCell", "buildLayout"),
+                    get_method(
+                        "org.telegram.messenger.UserObject",
+                        "getUserName",
+                        "org.telegram.tgnet.TLRPC$User",
+                    ),
+                    self.decorate_name,
+                )
+            except Exception:
+                self.log("Name snow hook is unavailable in this build")
+        self.log("Roqi New Year loaded")
+
+    def is_premium(self):
+        try:
+            return bool(jclass("com.exteragram.messenger.roqi.RoqiPremium").isPremium())
+        except Exception:
+            return False
+
+    def decorate_name(self, chain):
+        name = chain.proceed()
+        if not name:
+            return name
+        return name + " \u2744"
+
+    def create_settings(self):
+        return [
+            Header("RoqiGram \u2014 New Year"),
+            Switch("snow", "Snowfall in chat list", True, subtext="Animated layer, does not block input"),
+            Selector("intensity", "Snow intensity", 1, ["Low", "Medium", "High"]),
+            Switch("header", "Holiday header", True),
+            Switch("rotating_icons", "Rotating action icons", True),
+            Switch("cookies", "Cookies in empty state", True),
+            Divider(),
+            Switch("snow_nick", "Snowflake in nick (Premium)", False),
+            Text(
+                "Premium effects need an active RoqiGram Premium key.",
+                subtext="Key types: Forever 50 \u20bd / Monthly 10 \u20bd per month",
+            ),
+        ]

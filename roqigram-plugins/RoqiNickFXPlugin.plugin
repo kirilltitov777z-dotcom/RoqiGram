@@ -1,0 +1,71 @@
+from base_plugin import BasePlugin
+from hook_utils import get_method
+from ui.settings import Switch, Selector, Header, Text, Divider
+from java import jclass
+
+__id__ = "roqigram_nick_fx"
+__name__ = "Roqi Nick FX"
+__description__ = "Nick color, gradient and Premium effects: sparkle, snow, aurora, fire, neon rain, music wave."
+__author__ = "RoqiGram"
+__version__ = "1.0.0"
+__icon__ = "exteraPlugins/1"
+__app_version__ = ">=13.2.1"
+__sdk_version__ = ">=1.4.6.4"
+
+COLORS = [
+    "white", "black", "navy", "icy blue", "burgundy", "emerald",
+    "gold", "silver", "pine", "frost", "sand", "cocoa",
+]
+PRESETS = [
+    "rainbow", "frost", "snow", "aurora", "ember",
+    "burgundy", "gold", "mint",
+]
+EFFECTS = ["none", "sparkle", "snow", "aurora", "fire", "neon_rain", "music_wave"]
+MARK = {
+    "none": "", "sparkle": " \u2726", "snow": " \u2744", "aurora": " \u2591",
+    "fire": " \u2668", "neon_rain": " \u00b7", "music_wave": " \u223f",
+}
+
+
+class RoqiNickFXPlugin(BasePlugin):
+    def is_premium(self):
+        try:
+            return bool(jclass("com.exteragram.messenger.roqi.RoqiPremium").isPremium())
+        except Exception:
+            return False
+
+    def on_plugin_load(self):
+        try:
+            self.name_handle = self.hook_call_site(
+                get_method("org.telegram.ui.Cells.DialogCell", "buildLayout"),
+                get_method(
+                    "org.telegram.messenger.UserObject",
+                    "getUserName",
+                    "org.telegram.tgnet.TLRPC$User",
+                ),
+                self.decorate_name,
+            )
+        except Exception:
+            self.log("Nick hook is unavailable in this build")
+        self.log("Roqi Nick FX loaded")
+
+    def decorate_name(self, chain):
+        name = chain.proceed()
+        if not name:
+            return name
+        effect = self.get_setting("effect", 0)
+        if effect > 0 and not self.is_premium():
+            effect = 0
+        return name + MARK.get(EFFECTS[effect], "")
+
+    def create_settings(self):
+        return [
+            Header("RoqiGram \u2014 Nick styling"),
+            Selector("color", "Nick color", 0, COLORS),
+            Switch("gradient", "Gradient nick", False),
+            Selector("preset", "Gradient preset", 0, PRESETS),
+            Switch("animate", "Animated gradient", False),
+            Divider(),
+            Selector("effect", "Effect (Premium)", 0, EFFECTS),
+            Text("Effects 1\u20136 require an active RoqiGram Premium key."),
+        ]

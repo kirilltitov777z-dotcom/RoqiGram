@@ -1,0 +1,59 @@
+from base_plugin import BasePlugin
+from ui.settings import Switch, Selector, Header, Text, Divider
+from hook_utils import get_method
+from java import jclass
+
+__id__ = "roqigram_fake_nft"
+__name__ = "Roqi Fake NFT"
+__description__ = "Local decorative badge and showcase. Not an NFT, proves no ownership."
+__author__ = "RoqiGram"
+__version__ = "1.0.0"
+__icon__ = "exteraPlugins/1"
+__app_version__ = ">=13.2.1"
+__sdk_version__ = ">=1.4.6.4"
+
+IMAGES = ["nft_01", "nft_02", "nft_03", "nft_04", "nft_05"]
+
+
+class RoqiFakeNFTPlugin(BasePlugin):
+    def is_premium(self):
+        try:
+            return bool(jclass("com.exteragram.messenger.roqi.RoqiPremium").isPremium())
+        except Exception:
+            return False
+
+    def on_plugin_load(self):
+        if self.get_setting("show_badge", False) and self.is_premium():
+            try:
+                self.badge_handle = self.hook_call_site(
+                    get_method("org.telegram.ui.Cells.DialogCell", "buildLayout"),
+                    get_method(
+                        "org.telegram.messenger.UserObject",
+                        "getUserName",
+                        "org.telegram.tgnet.TLRPC$User",
+                    ),
+                    self.decorate_name,
+                )
+            except Exception:
+                self.log("Badge hook is unavailable in this build")
+        self.log("Roqi Fake NFT loaded")
+
+    def decorate_name(self, chain):
+        name = chain.proceed()
+        if not name:
+            return name
+        image = self.get_setting("image", 0)
+        return name + " \u25c7 #R-%04d" % (image + 1)
+
+    def create_settings(self):
+        return [
+            Header("RoqiGram \u2014 Fake NFT"),
+            Text(
+                "Local decorative element. Not an NFT and does not confirm ownership of an asset.",
+                subtext="Only visible to RoqiGram users",
+            ),
+            Switch("show_badge", "Show NFT badge", False),
+            Selector("image", "Image", 0, IMAGES),
+            Divider(),
+            Text("PREMIUM ONLY", subtext="Forever 50 \u20bd / Monthly 10 \u20bd per month"),
+        ]
