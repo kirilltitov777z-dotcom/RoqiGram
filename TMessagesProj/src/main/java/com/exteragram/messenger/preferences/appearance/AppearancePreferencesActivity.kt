@@ -479,7 +479,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
             val err = RoqiPremium.activate(input.text.toString(), 1)
             val msg = if (err == null) "Premium активирован. Все функции доступны." else err
             AlertDialog.Builder(ctx).setTitle("RoqiGram").setMessage(msg).setPositiveButton("OK", null).show()
-            listView.adapter.update(true)
+            listView.adapter?.update(true)
         }
         builder.setNegativeButton("Отмена", null)
         if (RoqiPremium.isAdmin()) {
