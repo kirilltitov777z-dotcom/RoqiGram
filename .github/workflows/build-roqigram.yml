@@ -70,6 +70,16 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      - name: Normalize icon owner directories
+        run: |
+          for d in TMessagesProj/appicons/*/; do
+            n=$(basename "$d")
+            l=$(echo "$n" | tr 'A-Z' 'a-z')
+            if [ "$n" != "$l" ] && [ ! -d "TMessagesProj/appicons/$l" ]; then
+              cp -r "$d" "TMessagesProj/appicons/$l"
+            fi
+          done
+
       - name: Generate Roqi launcher icons
         run: ./gradlew :TMessagesProj:generateAppIcons --stacktrace
 
