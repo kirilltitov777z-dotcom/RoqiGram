@@ -70,6 +70,9 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      - name: Generate Roqi launcher icons
+        run: ./gradlew :TMessagesProj:generateAppIcons --stacktrace
+
       - name: Build universal APK (Full Afat)
         run: ./gradlew :TMessagesProj:assembleFullAfatRelease --stacktrace
 
