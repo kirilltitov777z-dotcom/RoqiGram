@@ -199,6 +199,76 @@
       "title": "Google ’26",
       "background": "@color/white",
       "author": "Slucket"
+    },
+    {
+      "id": "roqi01",
+      "title": "Roqi Paper Plane in Snow",
+      "author": "roqi",
+      "description": "Free icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi02",
+      "title": "Roqi Minimal R",
+      "author": "roqi",
+      "description": "Free icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi03",
+      "title": "Roqi Snow Globe",
+      "author": "roqi",
+      "description": "Free icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi04",
+      "title": "Roqi Frosted R",
+      "author": "roqi",
+      "description": "RoqiGram Premium icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi05",
+      "title": "Roqi Gingerbread R",
+      "author": "roqi",
+      "description": "RoqiGram Premium icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi06",
+      "title": "Roqi Winter Night",
+      "author": "roqi",
+      "description": "RoqiGram Premium icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi07",
+      "title": "Roqi Aurora R",
+      "author": "roqi",
+      "description": "RoqiGram Premium icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi08",
+      "title": "Roqi Minimal Snowflake R",
+      "author": "roqi",
+      "description": "RoqiGram Premium icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi09",
+      "title": "Roqi Candy Cane R",
+      "author": "roqi",
+      "description": "RoqiGram Premium icon",
+      "lossless": true
+    },
+    {
+      "id": "roqi10",
+      "title": "Roqi Candy Cane Night",
+      "author": "roqi",
+      "description": "RoqiGram Premium icon",
+      "lossless": true
     }
   ]
 }

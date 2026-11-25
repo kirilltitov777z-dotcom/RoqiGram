@@ -1,0 +1,82 @@
+name: Build RoqiGram APK
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Prepare signing keystore
+        run: |
+          mkdir -p TMessagesProj/config
+          if [ -n "${{ secrets.SIGNING_KEY_STORE_BASE64 }}" ]; then
+            echo "${{ secrets.SIGNING_KEY_STORE_BASE64 }}" | base64 -d > TMessagesProj/config/exteraGram.jks
+            echo "KEY_ALIAS=${{ secrets.SIGNING_KEY_ALIAS }}" >> $GITHUB_ENV
+            echo "STORE_PASS=${{ secrets.SIGNING_KEY_STORE_PASSWORD }}" >> $GITHUB_ENV
+            echo "KEY_PASS=${{ secrets.SIGNING_KEY_PASSWORD }}" >> $GITHUB_ENV
+          else
+            keytool -genkeypair -noprompt -alias roqi -keyalg RSA -keysize 2048 -validity 10000 \
+              -keystore TMessagesProj/config/exteraGram.jks -storepass roqigram -keypass roqigram \
+              -dname "CN=RoqiGram, OU=Roqi, O=RoqiGram, L=RU, S=RU, C=RU"
+            echo "KEY_ALIAS=roqi" >> $GITHUB_ENV
+            echo "STORE_PASS=roqigram" >> $GITHUB_ENV
+            echo "KEY_PASS=roqigram" >> $GITHUB_ENV
+          fi
+
+      - name: Create API_KEYS
+        run: |
+          cat > API_KEYS <<EOF
+          APP_ID = ${{ secrets.API_ID }}
+          APP_HASH = "${{ secrets.API_HASH }}"
+          MAPS_V2_API = ${{ secrets.MAPS_V2_API }}
+          SIGNING_KEY_PASSWORD = ${{ env.KEY_PASS }}
+          SIGNING_KEY_ALIAS = ${{ env.KEY_ALIAS }}
+          SIGNING_KEY_STORE_PASSWORD = ${{ env.STORE_PASS }}
+          EOF
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build universal APK (Full Afat)
+        run: ./gradlew :TMessagesProj:assembleFullAfatRelease --stacktrace
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RoqiGram-APK
+          path: TMessagesProj/build/outputs/apk/full/afat/release/*.apk
+
+      - name: Create Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: TMessagesProj/build/outputs/apk/full/afat/release/*.apk
+          tag_name: build-${{ github.run_number }}
+          name: RoqiGram Build ${{ github.run_number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
