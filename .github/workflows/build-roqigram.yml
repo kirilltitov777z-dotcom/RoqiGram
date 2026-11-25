@@ -89,17 +89,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew :TMessagesProj:assembleFullAfatRelease --stacktrace
 
+      - name: Locate APK
+        run: find . -type f -name '*.apk' -print
+
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: RoqiGram-APK
-          path: TMessagesProj/build/outputs/apk/full/afat/release/*.apk
+          path: '**/*.apk'
+          if-no-files-found: error
 
       - name: Create Release
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
-          files: TMessagesProj/build/outputs/apk/full/afat/release/*.apk
+          files: '**/*.apk
           tag_name: build-${{ github.run_number }}
           name: RoqiGram Build ${{ github.run_number }}
         env:
