@@ -17,6 +17,8 @@ package com.exteragram.messenger.preferences.appearance
 import android.content.Context
 import android.os.Build
 import android.view.View
+import android.widget.EditText
+import android.widget.LinearLayout
 import com.exteragram.messenger.*
 import com.exteragram.messenger.appicons.AppIcon
 import com.exteragram.messenger.appicons.AppIconController
@@ -24,6 +26,7 @@ import com.exteragram.messenger.appicons.AppIconPreviewDrawable
 import com.exteragram.messenger.appicons.ui.AppIconsActivity
 import com.exteragram.messenger.icons.ui.IconPacksActivity
 import com.exteragram.messenger.pillstack.ui.PillStackPreferencesActivity
+import com.exteragram.messenger.roqi.RoqiPremium
 import com.exteragram.messenger.preferences.BasePreferencesActivity
 import com.exteragram.messenger.preferences.SwitchGroup
 import com.exteragram.messenger.preferences.appearance.components.AvatarCornersPreviewCell
@@ -43,6 +46,7 @@ import org.telegram.messenger.R
 import org.telegram.messenger.SharedConfig
 import org.telegram.ui.ActionBar.INavigationLayout.REBUILD_FLAG_REBUILD_LAST
 import org.telegram.ui.ActionBar.Theme
+import org.telegram.ui.ActionBar.AlertDialog
 import org.telegram.ui.Cells.TextCell
 import org.telegram.ui.Components.BulletinFactory
 import org.telegram.ui.Components.UItem
@@ -74,6 +78,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
         HIDE_ALL_CHATS,
         APP_NAVIGATION_SETTINGS,
         APP_ICON,
+        ROQI_PREMIUM,
         ICON_PACKS,
         FAB_SHAPE,
         SECTION_RADIUS,
@@ -209,6 +214,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
                 }
             }
         )
+        items.add(uButton(AppearanceItem.ROQI_PREMIUM, "RoqiGram Premium", R.drawable.msg_sticker, subtext = RoqiPremium.statusText(), linkAlias = "roqiPremium"))
         items.add(uButton(AppearanceItem.ICON_PACKS, getString(R.string.IconPacks), R.drawable.msg_sticker, subtext = getString(R.string.IconPacksInfo), linkAlias = "iconPacks"))
         items.add(uButton(AppearanceItem.PILL_STACK, getString(R.string.PillStackPills), R.drawable.outline_header_search, subtext = getString(R.string.PillStackPillsInfo), linkAlias = "pillStack"))
         items.add(UItem.asShadow())
@@ -293,6 +299,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
             }
             AppearanceItem.APP_NAVIGATION_SETTINGS -> presentFragment(AppNavigationPreferencesActivity())
             AppearanceItem.APP_ICON -> presentFragment(AppIconsActivity())
+            AppearanceItem.ROQI_PREMIUM -> showRoqiPremiumDialog()
             AppearanceItem.ICON_PACKS -> presentFragment(IconPacksActivity())
             AppearanceItem.SEPARATED_HEADERS -> {
                 if (dividerStyle == DividerStyle.SEGMENTS) return
@@ -447,4 +454,78 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
         parentLayout.rebuildFragments(0)
         listView.adapter?.update(true)
     }
+    private fun showRoqiPremiumDialog() {
+        val ctx = context ?: return
+        val builder = AlertDialog.Builder(ctx)
+        builder.setTitle("RoqiGram Premium")
+        builder.setMessage(
+            RoqiPremium.statusText() + "\n\n" +
+            "Premium Forever — 50 ₽ навсегда\n" +
+            "Premium Monthly — 10 ₽/мес\n\n" +
+            "Покупка: @Cafulu\nАдминистратор: 8835641983"
+        )
+        val input = EditText(ctx)
+        input.hint = "RF-XXXX-XXXX-XXXX-XXXX"
+        val wrap = LinearLayout(ctx)
+        wrap.orientation = LinearLayout.VERTICAL
+        val lp = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+        lp.setMargins(AndroidUtilities.dp(20f), 0, AndroidUtilities.dp(20f), 0)
+        wrap.addView(input, lp)
+        builder.setView(wrap)
+        builder.setPositiveButton("Активировать") { _, _ ->
+            val err = RoqiPremium.activate(input.text.toString(), 1)
+            val msg = if (err == null) "Premium активирован. Все функции доступны." else err
+            AlertDialog.Builder(ctx).setTitle("RoqiGram").setMessage(msg).setPositiveButton("OK", null).show()
+            listView.adapter.update(true)
+        }
+        builder.setNegativeButton("Отмена", null)
+        if (RoqiPremium.isAdmin()) {
+            builder.setNeutralButton("Admin") { _, _ -> showRoqiAdminDialog() }
+        }
+        builder.show()
+    }
+
+    private fun showRoqiAdminDialog() {
+        val ctx = context ?: return
+        AlertDialog.Builder(ctx)
+            .setTitle("RoqiGram Admin — выдача ключей")
+            .setItems(
+                arrayOf(
+                    "+ Forever (50 ₽)",
+                    "+ Monthly 1 мес",
+                    "+ Monthly 3 мес",
+                    "+ Monthly 6 мес",
+                    "+ Monthly 12 мес",
+                    "Статус"
+                )
+            ) { _, which ->
+                when (which) {
+                    0 -> showRoqiKey(RoqiPremium.generateKey(true, 0))
+                    1 -> showRoqiKey(RoqiPremium.generateKey(false, 1))
+                    2 -> showRoqiKey(RoqiPremium.generateKey(false, 3))
+                    3 -> showRoqiKey(RoqiPremium.generateKey(false, 6))
+                    4 -> showRoqiKey(RoqiPremium.generateKey(false, 12))
+                    else -> showRoqiKey(RoqiPremium.statusText())
+                }
+            }
+            .setNegativeButton("Закрыть", null)
+            .show()
+    }
+
+    private fun showRoqiKey(text: String) {
+        val ctx = context ?: return
+        AlertDialog.Builder(ctx)
+            .setTitle("Ключ / статус")
+            .setMessage(text)
+            .setPositiveButton("Копировать") { _, _ ->
+                val cm = ctx.getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+                cm.primaryClip = android.content.ClipData.newPlainText("RoqiGram", text)
+            }
+            .setNegativeButton("OK", null)
+            .show()
+    }
+
 }
