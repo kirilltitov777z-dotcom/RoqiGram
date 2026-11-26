@@ -6353,7 +6353,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         setupHeaderGlass();
 
         ViewCompat.setOnApplyWindowInsetsListener(fragmentView, this::onApplyWindowInsets);
-        com.exteragram.messenger.roqi.RoqiProfileDecor.decorate(fragmentView, context);
+        com.exteragram.messenger.roqi.RoqiProfileDecor.decorate(fragmentView, listView, context, myProfile);
         return fragmentView;
     }
 

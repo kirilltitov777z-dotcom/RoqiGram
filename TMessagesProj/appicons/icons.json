@@ -5,269 +5,76 @@
       "id": "default",
       "resource": "ic_launcher",
       "component": "DefaultIcon",
-      "titleRes": "AppIconDefault",
-      "descriptionRes": "AppIconDefaultInfo",
-      "background": "@color/ic_background",
+      "title": "Roqi 1 — Paper Plane in Snow",
+      "description": "Бесплатная иконка",
+      "background": "ic_launcher_background.png",
+      "foreground": "ic_launcher_foreground.png",
       "round": true,
-      "author": "exteraGram"
-    },
-    {
-      "id": "beta",
-      "resource": "ic_launcher_beta",
-      "monochrome": "@drawable/ic_monochrome_beta",
-      "assetsOnly": true
-    },
-    {
-      "id": "winter",
-      "titleRes": "AppIconWinter",
-      "descriptionRes": "AppIconWinterInfo",
-      "foreground": "@mipmap/ic_launcher_foreground",
-      "availability": "winter",
-      "author": "exteraGram"
-    },
-    {
-      "id": "monet",
-      "titleRes": "AppIconMonet",
-      "descriptionRes": "AppIconMonetInfo",
-      "background": "@color/ic_background_monet",
-      "foreground": "@drawable/ic_foreground_monet",
-      "monochrome": "none",
-      "availability": "monet",
-      "legacy": false,
-      "author": "exteraGram"
-    },
-    {
-      "id": "orbit",
-      "titleRes": "AppIconOrbit",
-      "descriptionRes": "AppIconOrbitInfo",
-      "background": "@color/ic_background",
-      "monochrome": "@drawable/ic_monochrome_orbit",
-      "author": "exteraGram"
-    },
-    {
-      "id": "editor",
-      "titleRes": "AppIconEditor",
-      "descriptionRes": "AppIconEditorInfo",
-      "author": "exteraGram"
-    },
-    {
-      "id": "mole",
-      "title": "Mole",
-      "author": "whatwherewhywhen"
-    },
-    {
-      "id": "echpochmak",
-      "title": "Echpochmak",
-      "author": "whatwherewhywhen"
-    },
-    {
-      "id": "avatar",
-      "title": "Avatar",
-      "author": "cIick_cIack"
-    },
-    {
-      "id": "candy",
-      "title": "Candy",
-      "author": "impulz3"
-    },
-    {
-      "id": "guitar",
-      "title": "Guitar",
-      "author": "nekto_nkt"
-    },
-    {
-      "id": "sus",
-      "titleRes": "AppIconSus",
-      "background": "@color/ic_background_sus",
-      "author": "MilesBlooper"
-    },
-    {
-      "id": "frog",
-      "title": "Frog",
-      "author": "cIick_cIack"
-    },
-    {
-      "id": "hamster",
-      "title": "Hamster",
-      "author": "whatwherewhywhen"
-    },
-    {
-      "id": "sponge",
-      "title": "Sponge",
-      "author": "nneeuurr"
-    },
-    {
-      "id": "invincible",
-      "titleRes": "AppIconInvincible",
-      "descriptionRes": "AppIconInvincibleInfo",
-      "author": "exteraGram"
-    },
-    {
-      "id": "flappy",
-      "title": "Flappy",
-      "author": "nneeuurr"
-    },
-    {
-      "id": "nyan_cat",
-      "title": "Nyan Cat",
-      "author": "n1ksly"
-    },
-    {
-      "id": "ice_age",
-      "titleRes": "AppIconIceAge",
-      "descriptionRes": "AppIconIceAgeInfo",
-      "author": "exteraGram"
-    },
-    {
-      "id": "fish",
-      "title": "Fish",
-      "author": "whatwherewhywhen"
-    },
-    {
-      "id": "psychosis",
-      "title": "Psychosis",
-      "author": "cIick_cIack"
-    },
-    {
-      "id": "xp",
-      "title": "XP",
-      "author": "weizoqq"
-    },
-    {
-      "id": "nasa",
-      "title": "NASA",
-      "author": "cIick_cIack"
-    },
-    {
-      "id": "cyberpunk",
-      "titleRes": "AppIconCyberpunk",
-      "descriptionRes": "AppIconCyberpunkInfo",
-      "background": "@color/ic_background_cyberpunk",
-      "monochrome": "@drawable/ic_monochrome_cyberpunk",
-      "author": "exteraGram"
-    },
-    {
-      "id": "space",
-      "titleRes": "AppIconSpace",
-      "descriptionRes": "AppIconSpaceInfo",
-      "monochrome": "@drawable/ic_monochrome_space",
-      "author": "exteraGram"
-    },
-    {
-      "id": "jellyfish",
-      "title": "Jellyfish",
-      "author": "whatwherewhywhen"
-    },
-    {
-      "id": "human",
-      "title": "Human",
-      "author": "cIick_cIack"
-    },
-    {
-      "id": "sunset",
-      "titleRes": "AppIconSunset",
-      "descriptionRes": "AppIconSunsetInfo",
-      "author": "exteraGram"
-    },
-    {
-      "id": "amethyst",
-      "titleRes": "AppIconAmethyst",
-      "descriptionRes": "AppIconAmethystInfo",
-      "author": "exteraGram"
-    },
-    {
-      "id": "aurora",
-      "titleRes": "AppIconAurora",
-      "descriptionRes": "AppIconAuroraInfo",
-      "author": "exteraGram"
-    },
-    {
-      "id": "osu",
-      "title": "osu!",
-      "author": "ataeshi"
-    },
-    {
-      "id": "google",
-      "titleRes": "AppIconGoogle",
-      "descriptionRes": "AppIconGoogleInfo",
-      "background": "@color/white",
-      "monochrome": "@drawable/ic_monochrome_google",
-      "author": "exteraGram"
-    },
-    {
-      "id": "google26",
-      "title": "Google ’26",
-      "background": "@color/white",
-      "author": "Slucket"
-    },
-    {
-      "id": "roqi01",
-      "title": "Roqi Paper Plane in Snow",
-      "author": "roqi",
-      "description": "Free icon",
-      "lossless": true
+      "legacy": true,
+      "lossless": true,
+      "author": "roqi"
     },
     {
       "id": "roqi02",
-      "title": "Roqi Minimal R",
+      "title": "Roqi 2 — Minimal R",
       "author": "roqi",
-      "description": "Free icon",
+      "description": "Бесплатная иконка",
       "lossless": true
     },
     {
       "id": "roqi03",
-      "title": "Roqi Snow Globe",
+      "title": "Roqi 3 — Snow Globe",
       "author": "roqi",
-      "description": "Free icon",
+      "description": "Бесплатная иконка",
       "lossless": true
     },
     {
       "id": "roqi04",
-      "title": "Roqi Frosted R",
+      "title": "Roqi 4 — Frosted R",
       "author": "roqi",
-      "description": "RoqiGram Premium icon",
+      "description": "RoqiGram Premium",
       "lossless": true
     },
     {
       "id": "roqi05",
-      "title": "Roqi Gingerbread R",
+      "title": "Roqi 5 — Gingerbread R",
       "author": "roqi",
-      "description": "RoqiGram Premium icon",
+      "description": "RoqiGram Premium",
       "lossless": true
     },
     {
       "id": "roqi06",
-      "title": "Roqi Winter Night",
+      "title": "Roqi 6 — Winter Night",
       "author": "roqi",
-      "description": "RoqiGram Premium icon",
+      "description": "RoqiGram Premium",
       "lossless": true
     },
     {
       "id": "roqi07",
-      "title": "Roqi Aurora R",
+      "title": "Roqi 7 — Aurora R",
       "author": "roqi",
-      "description": "RoqiGram Premium icon",
+      "description": "RoqiGram Premium",
       "lossless": true
     },
     {
       "id": "roqi08",
-      "title": "Roqi Minimal Snowflake R",
+      "title": "Roqi 8 — Minimal Snowflake R",
       "author": "roqi",
-      "description": "RoqiGram Premium icon",
+      "description": "RoqiGram Premium",
       "lossless": true
     },
     {
       "id": "roqi09",
-      "title": "Roqi Candy Cane R",
+      "title": "Roqi 9 — Candy Cane R",
       "author": "roqi",
-      "description": "RoqiGram Premium icon",
+      "description": "RoqiGram Premium",
       "lossless": true
     },
     {
       "id": "roqi10",
-      "title": "Roqi Candy Cane Night",
+      "title": "Roqi 10 — Candy Cane Night",
       "author": "roqi",
-      "description": "RoqiGram Premium icon",
+      "description": "RoqiGram Premium",
       "lossless": true
     }
   ]

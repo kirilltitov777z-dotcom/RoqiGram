@@ -27,7 +27,11 @@ import javax.crypto.spec.SecretKeySpec;
 
 public final class RoqiPremium {
     private static final String PREF = "roqi_premium_v1";
-    private static final Pattern KEY_PATTERN = Pattern.compile("^(RF|RM)-[A-HJ-NP-Z2-9]{4}(-[A-HJ-NP-Z2-9]{4}){3}$");
+
+    // The first three groups use the human-friendly alphabet (no 0/O/1/I).
+    // The last group is the HMAC checksum and is hexadecimal, so it may contain 0 and 1.
+    private static final Pattern KEY_PATTERN =
+            Pattern.compile("^(RF|RM)(-[A-HJ-NP-Z2-9]{4}){3}-[0-9A-F]{4}$");
     private static final char[] ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789".toCharArray();
 
     // Split so plain string scanning does not reveal the admin id. R8 folds this back together.
@@ -60,17 +64,23 @@ public final class RoqiPremium {
     private static String secret() {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
-            return hex(md.digest((SECRET_SALT + SECRET_A + SECRET_B + SECRET_C).getBytes(StandardCharsets.UTF_8)));
+            return hex(md.digest((SECRET_SALT + SECRET_A + SECRET_B + SECRET_C)
+                    .getBytes(StandardCharsets.UTF_8)));
         } catch (Exception e) {
             return SECRET_A + SECRET_B + SECRET_C;
         }
     }
 
-    private static String hmac4(String body, String prefix) {
+    /**
+     * Checksum input is body + prefix + months. Forever keys use 0 as the month marker,
+     * monthly keys carry their real duration so the client does not have to trust a caller.
+     */
+    private static String hmac4(String body, String prefix, int months) {
         try {
             Mac mac = Mac.getInstance("HmacSHA256");
             mac.init(new SecretKeySpec(secret().getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
-            byte[] out = mac.doFinal((body + prefix).getBytes(StandardCharsets.US_ASCII));
+            String payload = body + prefix + ("RM".equals(prefix) ? months : 0);
+            byte[] out = mac.doFinal(payload.getBytes(StandardCharsets.US_ASCII));
             return hex(out).substring(0, 4);
         } catch (Exception e) {
             return "";
@@ -103,12 +113,18 @@ public final class RoqiPremium {
         }
     }
 
+    private static int normalizeMonths(int months) {
+        return months == 3 || months == 6 || months == 12 ? months : 1;
+    }
+
     public static String generateKey(boolean forever, int months) {
         String prefix = forever ? "RF" : "RM";
+        int duration = forever ? 0 : normalizeMonths(months);
         SecureRandom rnd = new SecureRandom();
         StringBuilder body = new StringBuilder();
         for (int i = 0; i < 12; i++) body.append(ALPHABET[rnd.nextInt(ALPHABET.length)]);
-        return prefix + "-" + group(body, 0) + "-" + group(body, 4) + "-" + group(body, 8) + "-" + hmac4(body.toString(), prefix);
+        return prefix + "-" + group(body, 0) + "-" + group(body, 4) + "-" + group(body, 8)
+                + "-" + hmac4(body.toString(), prefix, duration);
     }
 
     private static String group(StringBuilder s, int from) {
@@ -132,22 +148,35 @@ public final class RoqiPremium {
         return key != null && KEY_PATTERN.matcher(key.trim().toUpperCase(Locale.US)).matches();
     }
 
-    public static boolean verify(String key) {
-        if (!isValidFormat(key)) return false;
+    /**
+     * Returns 0 for an invalid key, -1 for Forever and 1/3/6/12 for Monthly.
+     */
+    public static int verifyMonths(String key) {
+        if (!isValidFormat(key)) return 0;
         String k = key.trim().toUpperCase(Locale.US);
-        String body = k.replace("-", "");
-        String expected = hmac4(body.substring(0, 12), body.substring(0, 2));
-        return expected.equalsIgnoreCase(body.substring(12));
+        String raw = k.replace("-", "");
+        String prefix = raw.substring(0, 2);
+        String body = raw.substring(2, 14);
+        String supplied = raw.substring(14);
+        if ("RF".equals(prefix)) {
+            return hmac4(body, prefix, 0).equalsIgnoreCase(supplied) ? -1 : 0;
+        }
+        for (int months : new int[]{1, 3, 6, 12}) {
+            if (hmac4(body, prefix, months).equalsIgnoreCase(supplied)) return months;
+        }
+        return 0;
+    }
+
+    public static boolean verify(String key) {
+        return verifyMonths(key) != 0;
     }
 
     private static String hwid() {
         try {
             String androidId = Settings.Secure.getString(ctx().getContentResolver(), Settings.Secure.ANDROID_ID);
-            return MessageDigest.getInstance("SHA-256")
-                    .digest((Build.FINGERPRINT + "|" + androidId).getBytes(StandardCharsets.UTF_8)).length > 0
-                    ? hex(MessageDigest.getInstance("SHA-256")
-                    .digest((Build.FINGERPRINT + "|" + androidId).getBytes(StandardCharsets.UTF_8))).substring(0, 16)
-                    : "";
+            byte[] digest = MessageDigest.getInstance("SHA-256")
+                    .digest((Build.FINGERPRINT + "|" + androidId).getBytes(StandardCharsets.UTF_8));
+            return hex(digest).substring(0, 16);
         } catch (Exception e) {
             return "";
         }
@@ -166,33 +195,44 @@ public final class RoqiPremium {
     }
 
     /** Returns null on success or a localized error description. */
-    public static String activate(String key, int months) {
-        if (!verify(key)) return "Неверный ключ";
+    public static String activate(String key) {
+        int months = verifyMonths(key);
+        if (months == 0) {
+            return "Неверный ключ. Формат: RF-XXXX-XXXX-XXXX-XXXX";
+        }
         String k = key.trim().toUpperCase(Locale.US);
         if (isRevoked(k)) return "Ключ отозван";
+        boolean forever = months == -1;
         SharedPreferences.Editor e = prefs().edit();
         e.putString(K_KEY, obfuscate(k));
-        e.putString(K_TYPE, k.startsWith("RF") ? "F" : "M");
+        e.putString(K_TYPE, forever ? "F" : "M");
         e.putLong(K_ACTIVATED, System.currentTimeMillis());
         e.putString(K_HWID, hwid());
         long tg = 0;
         try {
-            tg = UserConfig.getInstance(UserConfig.selectedAccount).getCurrentUser().id;
+            org.telegram.tgnet.TLRPC.User user = UserConfig.getInstance(UserConfig.selectedAccount).getCurrentUser();
+            if (user != null) tg = user.id;
         } catch (Throwable ignored) {}
         e.putLong(K_TGID, tg);
-        if (k.startsWith("RM")) {
-            Calendar c = Calendar.getInstance();
-            c.add(Calendar.MONTH, months <= 0 ? 1 : months);
-            e.putLong(K_EXPIRES, c.getTimeInMillis());
-        } else {
+        if (forever) {
             e.remove(K_EXPIRES);
+        } else {
+            Calendar c = Calendar.getInstance();
+            c.add(Calendar.MONTH, months);
+            e.putLong(K_EXPIRES, c.getTimeInMillis());
         }
         e.apply();
         return null;
     }
 
+    /** Kept for source compatibility with older call sites; the key itself carries the duration. */
+    public static String activate(String key, int ignoredMonths) {
+        return activate(key);
+    }
+
     public static void clear() {
-        prefs().edit().remove(K_KEY).remove(K_TYPE).remove(K_EXPIRES).remove(K_ACTIVATED).remove(K_HWID).remove(K_TGID).apply();
+        prefs().edit().remove(K_KEY).remove(K_TYPE).remove(K_EXPIRES)
+                .remove(K_ACTIVATED).remove(K_HWID).remove(K_TGID).apply();
     }
 
     public static boolean isForever() {
@@ -203,10 +243,17 @@ public final class RoqiPremium {
         String key = deobfuscate(prefs().getString(K_KEY, null));
         if (key == null || isRevoked(key)) return false;
         long tg = prefs().getLong(K_TGID, -1);
+        long current = 0;
         try {
-            long current = UserConfig.getInstance(UserConfig.selectedAccount).getCurrentUser().id;
-            if (tg != current) return false;
-        } catch (Throwable ignored) {
+            org.telegram.tgnet.TLRPC.User user = UserConfig.getInstance(UserConfig.selectedAccount).getCurrentUser();
+            if (user != null) current = user.id;
+        } catch (Throwable ignored) {}
+        if (tg == 0 && current != 0) {
+            // The key was activated before login. Bind it to the first account that appears.
+            prefs().edit().putLong(K_TGID, current).apply();
+        } else if (tg != 0 && tg != -1 && current != 0 && tg != current) {
+            return false;
+        } else if (tg != 0 && tg != -1 && current == 0) {
             return false;
         }
         String type = deobfuscate(prefs().getString(K_TYPE, null));
@@ -230,7 +277,8 @@ public final class RoqiPremium {
 
     public static String statusText() {
         if (isForever()) return "Premium Forever — активен бессрочно";
-        if (isActive()) return "Premium Monthly — активен до " + dateText() + " (осталось " + daysLeft() + " дн.)";
+        if (isActive()) return "Premium Monthly — активен до " + dateText()
+                + " (осталось " + daysLeft() + " дн.)";
         if ("M".equals(deobfuscate(prefs().getString(K_TYPE, null))) && daysLeft() == 0)
             return "Premium Monthly — истёк. Продлить 10 ₽/мес → @Cafulu";
         return "Premium не активирован";

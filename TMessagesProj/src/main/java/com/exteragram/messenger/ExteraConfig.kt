@@ -30,6 +30,7 @@ import com.exteragram.messenger.config.IntegerPref
 import com.exteragram.messenger.config.LongPref
 import com.exteragram.messenger.config.NullableStringPref
 import com.exteragram.messenger.config.PrefEnum
+import com.exteragram.messenger.config.FLOATING
 import com.exteragram.messenger.config.SHOW
 import com.exteragram.messenger.config.SanitizedIntegerPref
 import com.exteragram.messenger.config.StringPref
@@ -502,7 +503,7 @@ fun loadConfig() {
     synchronized(sync) {
         if (configLoaded) return
 
-        setMode(preferences.getInt("bottomNavigationBarMode", SHOW))
+        setMode(preferences.getInt("bottomNavigationBarMode", FLOATING))
 
         loadIconPacksLayout()
 

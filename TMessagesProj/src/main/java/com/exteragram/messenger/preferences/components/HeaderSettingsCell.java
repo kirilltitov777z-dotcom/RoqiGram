@@ -60,15 +60,7 @@ public class HeaderSettingsCell extends LinearLayout implements CustomPreference
         setOrientation(VERTICAL);
         setGravity(Gravity.CENTER);
 
-        Drawable arrow = ContextCompat.getDrawable(context, R.drawable.ic_foreground).mutate();
-        Theme.ThemeInfo theme = Theme.getActiveTheme();
-        int color = ContextCompat.getColor(context, R.color.ic_background);
-
-        if (theme.isMonet() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            color = MonetUtils.getColor(theme.isDark() ? "a2_800" : "a1_100");
-            arrow = ContextCompat.getDrawable(context, R.drawable.ic_foreground_solid).mutate();
-            arrow.setColorFilter(new PorterDuffColorFilter(MonetUtils.getColor(theme.isDark() ? "a1_200" : "a1_700"), PorterDuff.Mode.MULTIPLY));
-        }
+        Drawable arrow = ContextCompat.getDrawable(context, R.mipmap.ic_launcher);
 
         imageView = new RLottieImageView(context) {
             @Override
@@ -79,7 +71,7 @@ public class HeaderSettingsCell extends LinearLayout implements CustomPreference
                 canvas.restore();
             }
         };
-        imageView.setBackgroundColor(color);
+        imageView.setBackgroundColor(0);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setImageDrawable(arrow);
         addView(imageView, LayoutHelper.createLinear(72, 72, Gravity.CENTER | Gravity.TOP, 0, 28, 0, 0));

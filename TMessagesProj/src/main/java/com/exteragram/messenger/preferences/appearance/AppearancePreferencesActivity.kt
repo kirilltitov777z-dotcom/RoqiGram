@@ -14,11 +14,22 @@
 
 package com.exteragram.messenger.preferences.appearance
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
+import android.net.Uri
 import android.os.Build
 import android.view.View
+import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.TextView
+import org.telegram.messenger.browser.Browser
+import java.io.File
+import java.io.FileOutputStream
 import com.exteragram.messenger.*
 import com.exteragram.messenger.appicons.AppIcon
 import com.exteragram.messenger.appicons.AppIconController
@@ -58,6 +69,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
 
     companion object {
         private const val APP_ICON_PREVIEW_SIZE_DP = 34
+        private const val REQ_BANNER = 4701
     }
 
     enum class AppearanceItem {
@@ -217,7 +229,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
             }
         )
         items.add(uButton(AppearanceItem.ROQI_PREMIUM, "RoqiGram Premium", R.drawable.msg_sticker, subtext = RoqiPremium.statusText(), linkAlias = "roqiPremium"))
-        items.add(uButton(AppearanceItem.ROQI_PROFILE, "RoqiGram Profile", R.drawable.msg_sticker, subtext = "Баннер и музыкальная волна", linkAlias = "roqiProfile"))
+        items.add(uButton(AppearanceItem.ROQI_PROFILE, "RoqiGram Profile", R.drawable.msg_sticker, subtext = "Баннер, волна, NFT и Premium badge", linkAlias = "roqiProfile"))
         items.add(uButton(AppearanceItem.ICON_PACKS, getString(R.string.IconPacks), R.drawable.msg_sticker, subtext = getString(R.string.IconPacksInfo), linkAlias = "iconPacks"))
         items.add(uButton(AppearanceItem.PILL_STACK, getString(R.string.PillStackPills), R.drawable.outline_header_search, subtext = getString(R.string.PillStackPillsInfo), linkAlias = "pillStack"))
         items.add(UItem.asShadow())
@@ -465,11 +477,14 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
         builder.setMessage(
             RoqiPremium.statusText() + "\n\n" +
             "Premium Forever — 50 ₽ навсегда\n" +
-            "Premium Monthly — 10 ₽/мес\n\n" +
+            "Premium Monthly — 10 ₽/мес (1, 3, 6 или 12 месяцев)\n\n" +
             "Покупка: @Cafulu\nАдминистратор: 8835641983"
         )
         val input = EditText(ctx)
         input.hint = "RF-XXXX-XXXX-XXXX-XXXX"
+        input.filters = arrayOf(android.text.InputFilter.LengthFilter(23))
+        input.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                android.text.InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS
         val wrap = LinearLayout(ctx)
         wrap.orientation = LinearLayout.VERTICAL
         val lp = LinearLayout.LayoutParams(
@@ -480,14 +495,23 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
         wrap.addView(input, lp)
         builder.setView(wrap)
         builder.setPositiveButton("Активировать") { _, _ ->
-            val err = RoqiPremium.activate(input.text.toString(), 1)
-            val msg = if (err == null) "Premium активирован. Все функции доступны." else err
-            AlertDialog.Builder(ctx).setTitle("RoqiGram").setMessage(msg).setPositiveButton("OK", null).show()
+            val err = RoqiPremium.activate(input.text.toString())
+            val msg = if (err == null) {
+                "Premium активирован.\n\n" + RoqiPremium.statusText()
+            } else {
+                err + "\n\nКлюч покупается у @Cafulu. Forever — 50 ₽, Monthly — 10 ₽/мес."
+            }
+            AlertDialog.Builder(ctx).setTitle("RoqiGram").setMessage(msg)
+                .setPositiveButton("OK", null).show()
             listView.adapter?.update(true)
         }
         builder.setNegativeButton("Отмена", null)
         if (RoqiPremium.isAdmin()) {
             builder.setNeutralButton("Admin") { _, _ -> showRoqiAdminDialog() }
+        } else {
+            builder.setNeutralButton("Купить") { _, _ ->
+                Browser.openUrl(ctx, "https://t.me/Cafulu")
+            }
         }
         builder.show()
     }
@@ -536,21 +560,140 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
         val ctx = context ?: return
         val banner = RoqiProfileDecor.bannerEnabled(ctx)
         val music = RoqiProfileDecor.musicEnabled(ctx)
+        val nft = RoqiProfileDecor.nftEnabled(ctx)
+        val badge = RoqiProfileDecor.badgeEnabled(ctx)
+
+        val wrap = LinearLayout(ctx).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(AndroidUtilities.dp(20f), 0, AndroidUtilities.dp(20f), 0)
+        }
+
+        fun makeField(hint: String, value: String): EditText = EditText(ctx).apply {
+            this.hint = hint
+            setText(value)
+            setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText))
+            setHintTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteHintText))
+        }
+
+        val titleInput = makeField("Название трека", RoqiProfileDecor.trackTitle(ctx))
+        val artistInput = makeField("Исполнитель", RoqiProfileDecor.trackArtist(ctx))
+        wrap.addView(titleInput, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT))
+        wrap.addView(artistInput, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT))
+
+        fun makeCheck(text: String, checked: Boolean): CheckBox = CheckBox(ctx).apply {
+            this.text = text
+            isChecked = checked
+            setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText))
+        }
+
+        val bannerBox = makeCheck("Баннер за профилем", banner)
+        val musicBox = makeCheck("Музыкальная волна с текстом", music)
+        val nftBox = makeCheck("NFT-карточка (локальный декор, не NFT)", nft)
+        val badgeBox = makeCheck("Premium badge в профиле", badge)
+        wrap.addView(bannerBox)
+        wrap.addView(musicBox)
+        wrap.addView(nftBox)
+        wrap.addView(badgeBox)
+
+        val colorLabel = TextView(ctx).apply {
+            text = "Цвет волны"
+            setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText))
+            setPadding(0, AndroidUtilities.dp(8f), 0, AndroidUtilities.dp(4f))
+        }
+        wrap.addView(colorLabel)
+
+        val colors = intArrayOf(0xFFC9A227.toInt(), 0xFF8B5CF6.toInt(),
+            0xFF22D3EE.toInt(), 0xFFF472B6.toInt())
+        var selectedColor = RoqiProfileDecor.waveColor(ctx)
+        val colorRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL }
+
+        fun paintSwatch(view: View, color: Int) {
+            val swatch = GradientDrawable()
+            swatch.shape = GradientDrawable.OVAL
+            swatch.setColor(color)
+            swatch.setStroke(
+                AndroidUtilities.dp(if (color == selectedColor) 3f else 1f),
+                if (color == selectedColor) 0xFFFFFFFF.toInt() else 0x66FFFFFF
+            )
+            view.background = swatch
+        }
+
+        for (color in colors) {
+            val swatch = View(ctx)
+            paintSwatch(swatch, color)
+            val lp = LinearLayout.LayoutParams(
+                AndroidUtilities.dp(34f), AndroidUtilities.dp(34f))
+            lp.rightMargin = AndroidUtilities.dp(10f)
+            colorRow.addView(swatch, lp)
+            swatch.setOnClickListener {
+                selectedColor = color
+                for (i in 0 until colorRow.childCount) {
+                    paintSwatch(colorRow.getChildAt(i), colors[i])
+                }
+            }
+        }
+        wrap.addView(colorRow)
+
+        val reset = Button(ctx).apply {
+            text = "Сбросить баннер"
+            setOnClickListener {
+                RoqiProfileDecor.clearBanner(ctx)
+                RoqiProfileDecor.setBannerEnabled(ctx, false)
+                bannerBox.isChecked = false
+            }
+        }
+        wrap.addView(reset)
+
+        val scroll = android.widget.ScrollView(ctx)
+        scroll.addView(wrap)
+
         AlertDialog.Builder(ctx)
             .setTitle("RoqiGram Profile")
-            .setMessage(
-                "Баннер: Download/roqi_banner.jpg\n" +
-                "Музыка: Download/roqi_music.txt (строка 1 — название, строка 2 — исполнитель)\n\n" +
-                "Видно только пользователям RoqiGram."
-            )
-            .setPositiveButton(if (banner) "Баннер: вкл (нажмите чтобы выкл)" else "Баннер: выкл (нажмите чтобы вкл)") { _, _ ->
-                RoqiProfileDecor.setBannerEnabled(ctx, !banner)
+            .setMessage("Украшения видны в вашем профиле. NFT-карточка — локальный декоративный элемент, не настоящий NFT.")
+            .setView(scroll)
+            .setPositiveButton("Сохранить") { _, _ ->
+                RoqiProfileDecor.setBannerEnabled(ctx, bannerBox.isChecked)
+                RoqiProfileDecor.setMusicEnabled(ctx, musicBox.isChecked)
+                RoqiProfileDecor.setNftEnabled(ctx, nftBox.isChecked)
+                RoqiProfileDecor.setBadgeEnabled(ctx, badgeBox.isChecked)
+                RoqiProfileDecor.setTrack(ctx, titleInput.text.toString(), artistInput.text.toString())
+                RoqiProfileDecor.setWaveColor(ctx, selectedColor)
+                android.widget.Toast.makeText(ctx, "Профиль обновлён. Откройте профиль заново.",
+                    android.widget.Toast.LENGTH_SHORT).show()
             }
-            .setNeutralButton(if (music) "Музыка: вкл (нажмите чтобы выкл)" else "Музыка: выкл (нажмите чтобы вкл)") { _, _ ->
-                RoqiProfileDecor.setMusicEnabled(ctx, !music)
-            }
-            .setNegativeButton("OK", null)
+            .setNeutralButton("Баннер из галереи") { _, _ -> pickBanner() }
+            .setNegativeButton("Отмена", null)
             .show()
+    }
+
+    private fun pickBanner() {
+        val intent = Intent(Intent.ACTION_GET_CONTENT).apply {
+            type = "image/*"
+            addCategory(Intent.CATEGORY_OPENABLE)
+        }
+        startActivityForResult(intent, REQ_BANNER)
+    }
+
+    override fun onActivityResultFragment(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResultFragment(requestCode, resultCode, data)
+        if (requestCode != REQ_BANNER || resultCode != Activity.RESULT_OK) return
+        val ctx = context ?: return
+        val uri: Uri = data?.data ?: return
+        try {
+            val target = File(ctx.filesDir, "roqi_banner.jpg")
+            ctx.contentResolver.openInputStream(uri)?.use { input ->
+                FileOutputStream(target).use { output -> input.copyTo(output) }
+            }
+            RoqiProfileDecor.setBannerPath(ctx, target.absolutePath)
+            RoqiProfileDecor.setBannerEnabled(ctx, true)
+            android.widget.Toast.makeText(ctx, "Баннер сохранён", android.widget.Toast.LENGTH_SHORT).show()
+            showRoqiProfileDialog()
+        } catch (t: Throwable) {
+            android.widget.Toast.makeText(ctx, "Не удалось открыть изображение",
+                android.widget.Toast.LENGTH_SHORT).show()
+        }
     }
 
 }

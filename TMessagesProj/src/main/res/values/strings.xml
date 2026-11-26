@@ -34,11 +34,11 @@
     <!--code enter view-->
     <string name="YourCode">Phone verification</string>
     <string name="SentSmsCode">We’ve sent an SMS with an activation code to your phone **%1$s**.</string>
-    <string name="SentAppCode">We\'ve sent the code to the **RoqiGram** app on your other device.</string>
-    <string name="SentAppCodeWithPhone">We\'ve sent the code to the **RoqiGram** app for %1$s on your other device.</string>
-    <string name="SentAppCodeTitle">Check your RoqiGram messages</string>
+    <string name="SentAppCode">We\'ve sent the code to the **Telegram** app on your other device. No access to it? Tap **Didn\'t get the code?** below and choose **SMS**.</string>
+    <string name="SentAppCodeWithPhone">We\'ve sent the code to the **Telegram** app for %1$s on your other device. No access? Tap **Didn\'t get the code?** below and choose **SMS**.</string>
+    <string name="SentAppCodeTitle">Code sent to Telegram</string>
     <string name="SentFragmentCode">Get the code for %1$s in the Anonymous Numbers section on Fragment.</string>
-    <string name="SentSmsCodeTitle">Enter code</string>
+    <string name="SentSmsCodeTitle">Enter the SMS code</string>
     <string name="OpenFragment">Open Fragment</string>
     <string name="SentCallCode">We\'re calling your phone **%1$s**.\n\nDon\'t accept the call, RoqiGram will process everything automatically.</string>
     <string name="SentCallOnly">Calling your phone **%1$s** to dictate the code.</string>

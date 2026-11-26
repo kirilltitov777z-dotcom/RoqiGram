@@ -60,7 +60,7 @@ public class SettingsRegistry {
     private final ConcurrentHashMap<String, Entry> entriesStringAlias = new ConcurrentHashMap<>();
     private final ConcurrentHashMap<Integer, String> primaryAliases = new ConcurrentHashMap<>();
     private static final Map<Class<? extends BaseFragment>, Integer> categoriesIcons = Map.ofEntries(
-            Map.entry(MainPreferencesActivity.class, R.drawable.extera_outline),
+            Map.entry(MainPreferencesActivity.class, R.drawable.msg_settings_old),
             Map.entry(GeneralPreferencesActivity.class, R.drawable.msg_media),
             Map.entry(AppearancePreferencesActivity.class, R.drawable.msg_theme),
             Map.entry(ChatsPreferencesActivity.class, R.drawable.msg_discussion),

@@ -40,10 +40,18 @@ jobs:
         run: |
           mkdir -p TMessagesProj/config
           if [ -n "${{ secrets.SIGNING_KEY_STORE_BASE64 }}" ]; then
-            echo "${{ secrets.SIGNING_KEY_STORE_BASE64 }}" | base64 -d > TMessagesProj/config/exteraGram.jks
-            echo "KEY_ALIAS=${{ secrets.SIGNING_KEY_ALIAS }}" >> $GITHUB_ENV
-            echo "STORE_PASS=${{ secrets.SIGNING_KEY_STORE_PASSWORD }}" >> $GITHUB_ENV
-            echo "KEY_PASS=${{ secrets.SIGNING_KEY_PASSWORD }}" >> $GITHUB_ENV
+            echo "${{ secrets.SIGNING_KEY_STORE_BASE64 }}" | base64 -d > TMessagesProj/config/roqi-upload.p12
+            STORE_PASS="${{ secrets.SIGNING_KEY_STORE_PASSWORD }}"
+            KEY_PASS="${{ secrets.SIGNING_KEY_PASSWORD }}"
+            KEY_ALIAS="${{ secrets.SIGNING_KEY_ALIAS }}"
+            keytool -importkeystore -noprompt \
+              -srckeystore TMessagesProj/config/roqi-upload.p12 -srcstoretype PKCS12 \
+              -srcstorepass "$STORE_PASS" -srcalias "$KEY_ALIAS" \
+              -destkeystore TMessagesProj/config/exteraGram.jks -deststoretype JKS \
+              -deststorepass "$STORE_PASS" -destalias "$KEY_ALIAS" -destkeypass "$KEY_PASS"
+            echo "KEY_ALIAS=$KEY_ALIAS" >> $GITHUB_ENV
+            echo "STORE_PASS=$STORE_PASS" >> $GITHUB_ENV
+            echo "KEY_PASS=$KEY_PASS" >> $GITHUB_ENV
           else
             keytool -genkeypair -noprompt -alias roqi -keyalg RSA -keysize 2048 -validity 10000 \
               -keystore TMessagesProj/config/exteraGram.jks -storepass roqigram -keypass roqigram \

@@ -33,11 +33,11 @@
     <!--code enter view-->
     <string name="YourCode">Проверка телефона</string>
     <string name="SentSmsCode">Мы отправили SMS с кодом проверки на Ваш телефон **%1$s**.</string>
-    <string name="SentAppCode">Мы отправили код в приложение **RoqiGram** на другом Вашем устройстве.</string>
-    <string name="SentAppCodeWithPhone">Мы отправили код через **RoqiGram** на другое устройство, где авторизован %1$s.</string>
-    <string name="SentAppCodeTitle">Проверьте сообщения в RoqiGram</string>
+    <string name="SentAppCode">Код отправлен в приложение **Telegram** на другом Вашем устройстве. Нет доступа к нему? Нажмите «Не получили код?» ниже и выберите **SMS**.</string>
+    <string name="SentAppCodeWithPhone">Код отправлен через **Telegram** на другое устройство, где авторизован %1$s. Нет доступа? Нажмите «Не получили код?» ниже и выберите **SMS**.</string>
+    <string name="SentAppCodeTitle">Код отправлен в Telegram</string>
     <string name="SentFragmentCode">Получите код для %1$s в разделе Anonymous Numbers платформы Fragment.</string>
-    <string name="SentSmsCodeTitle">Введите код</string>
+    <string name="SentSmsCodeTitle">Введите код из SMS</string>
     <string name="OpenFragment">Перейти к Fragment</string>
     <string name="SentCallCode">Наш робот звонит на номер **%1$s**.\n\nОтвечать на звонок не требуется, RoqiGram автоматически получит код для входа.</string>
     <string name="SentCallOnly">Мы звоним Вам по номеру **%1$s**, чтобы продиктовать код.</string>
