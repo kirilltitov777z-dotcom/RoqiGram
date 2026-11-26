@@ -102,7 +102,7 @@ public final class AppIcon {
     }
 
     public int getBackground() {
-        return isDefault() && BuildVars.isBetaApp() ? R.mipmap.ic_launcher_beta_background : background;
+        return background;
     }
 
     public boolean isBackgroundColor() {
@@ -110,7 +110,7 @@ public final class AppIcon {
     }
 
     public int getForeground() {
-        return isDefault() && BuildVars.isBetaApp() ? R.mipmap.ic_launcher_beta_foreground : foreground;
+        return foreground;
     }
 
     public CharSequence getTitle() {
