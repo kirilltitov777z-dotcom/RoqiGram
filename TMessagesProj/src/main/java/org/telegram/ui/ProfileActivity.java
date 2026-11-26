@@ -6354,6 +6354,37 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
 
         ViewCompat.setOnApplyWindowInsetsListener(fragmentView, this::onApplyWindowInsets);
         com.exteragram.messenger.roqi.RoqiProfileDecor.decorate(fragmentView, listView, context, myProfile);
+        if (nameTextView != null) {
+            if (com.exteragram.messenger.roqi.RoqiMods.coloredName(context)) {
+                nameTextView.getPaint().setShader(new android.graphics.LinearGradient(
+                        0, 0, org.telegram.messenger.AndroidUtilities.dp(180), 0,
+                        new int[]{0xFFFFD54F, 0xFFFF8A65, 0xFFF06292, 0xFFBA68C8, 0xFF4FC3F7},
+                        null, android.graphics.Shader.TileMode.CLAMP));
+            }
+            if (com.exteragram.messenger.roqi.RoqiMods.nameBadge(context)) {
+                nameTextView.getViewTreeObserver().addOnPreDrawListener(
+                        new android.view.ViewTreeObserver.OnPreDrawListener() {
+                            private boolean applied;
+                            @Override
+                            public boolean onPreDraw() {
+                                if (!applied) {
+                                    CharSequence current = nameTextView.getText();
+                                    if (current != null && current.length() > 0 && !current.toString().endsWith(" ♛")) {
+                                        android.text.SpannableStringBuilder sb =
+                                                new android.text.SpannableStringBuilder(current);
+                                        int from = sb.length();
+                                        sb.append(" ♛");
+                                        sb.setSpan(new android.text.style.ForegroundColorSpan(0xFFC9A227),
+                                                from, sb.length(), android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                                        nameTextView.setText(sb);
+                                        applied = true;
+                                    }
+                                }
+                                return true;
+                            }
+                        });
+            }
+        }
         return fragmentView;
     }
 

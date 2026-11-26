@@ -16,10 +16,9 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.ActionBar;
@@ -136,7 +135,24 @@ public final class RoqiProfileDecor {
             page.setTag(TAG_PAGE);
             root.addView(page, 0, new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            if (listView != null) listView.setBackgroundColor(Color.TRANSPARENT);
+            if (listView != null) {
+                listView.setBackgroundColor(Color.TRANSPARENT);
+                if (RoqiMods.transparentProfile(c)) {
+                    final ViewGroup lv = (ViewGroup) listView;
+                    lv.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+                        @Override
+                        public boolean onPreDraw() {
+                            for (int i = 0; i < lv.getChildCount(); i++) {
+                                View child = lv.getChildAt(i);
+                                if (child.getBackground() != null) {
+                                    child.setBackgroundColor(Color.TRANSPARENT);
+                                }
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
         }
 
         View topView = findTopView(root);
@@ -229,65 +245,6 @@ public final class RoqiProfileDecor {
                 ViewGroup.LayoutParams.MATCH_PARENT, (int) dp(c, 64));
         fadeParams.gravity = Gravity.BOTTOM;
         box.addView(fade, fadeParams);
-
-        int textColor = dark ? Color.WHITE : 0xFF151A28;
-
-        LinearLayout row = new LinearLayout(c);
-        row.setOrientation(LinearLayout.HORIZONTAL);
-        row.setGravity(Gravity.CENTER_VERTICAL);
-
-        TextView label = new TextView(c);
-        label.setText("RoqiGram");
-        label.setTextColor(textColor);
-        label.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
-        label.setTypeface(AndroidUtilities.bold());
-        if (dark) label.setShadowLayer(dp(c, 5), 0, dp(c, 2), 0x99000000);
-        row.addView(label);
-
-        if (badgeEnabled(c)) {
-            TextView chip = new TextView(c);
-            chip.setText("♛ ROQI");
-            chip.setTextColor(0xFF1A1206);
-            chip.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9);
-            chip.setTypeface(AndroidUtilities.bold());
-            chip.setPadding((int) dp(c, 8), (int) dp(c, 3),
-                    (int) dp(c, 8), (int) dp(c, 3));
-            GradientDrawable chipBg = new GradientDrawable();
-            chipBg.setColor(0xFFC9A227);
-            chipBg.setCornerRadius(dp(c, 20));
-            chip.setBackground(chipBg);
-            LinearLayout.LayoutParams chipParams = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            chipParams.leftMargin = (int) dp(c, 8);
-            row.addView(chip, chipParams);
-        }
-
-        FrameLayout.LayoutParams rowParams = new FrameLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        rowParams.gravity = Gravity.BOTTOM | Gravity.START;
-        rowParams.leftMargin = (int) dp(c, 16);
-        rowParams.bottomMargin = (int) dp(c, 20);
-        box.addView(row, rowParams);
-
-        if (nftEnabled(c)) {
-            TextView nft = new TextView(c);
-            nft.setText("Roqi NFT #001 · локальный декор");
-            nft.setTextColor(0xFFEDE7FF);
-            nft.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9);
-            nft.setPadding((int) dp(c, 9), (int) dp(c, 4),
-                    (int) dp(c, 9), (int) dp(c, 4));
-            GradientDrawable nftBg = new GradientDrawable();
-            nftBg.setColor(0xB33B1D6E);
-            nftBg.setCornerRadius(dp(c, 12));
-            nftBg.setStroke((int) dp(c, 1), 0x66FFFFFF);
-            nft.setBackground(nftBg);
-            FrameLayout.LayoutParams nftParams = new FrameLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            nftParams.gravity = Gravity.BOTTOM | Gravity.END;
-            nftParams.rightMargin = (int) dp(c, 16);
-            nftParams.bottomMargin = (int) dp(c, 20);
-            box.addView(nft, nftParams);
-        }
 
         return box;
     }

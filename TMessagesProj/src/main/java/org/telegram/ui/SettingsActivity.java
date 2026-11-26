@@ -852,7 +852,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
             items.add(UItem.asShadow(null));
         }
 
-        items.add(SettingCell.Factory.of(-1, 0xFFE83030, 0xFFE83030, Theme.isCurrentThemeMonet() ? R.drawable.ic_foreground_solid : R.drawable.ic_foreground, getString(R.string.Preferences)));
+        items.add(SettingCell.Factory.of(-1, 0xFF3B1D6E, 0xFF3B1D6E, R.drawable.msg_settings_old, getString(R.string.Preferences)));
 
         items.add(UItem.asShadow(null));
 

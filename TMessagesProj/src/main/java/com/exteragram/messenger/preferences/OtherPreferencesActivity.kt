@@ -14,7 +14,12 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
+import android.graphics.Color
 import android.os.CountDownTimer
+import android.view.Gravity
+import android.widget.Button
+import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.view.View
 import android.widget.TextView
 import java.io.File
@@ -63,12 +68,77 @@ class OtherPreferencesActivity : BasePreferencesActivity() {
 
     companion object {
         private const val REQ_BANNER = 4702
+        private const val MOD_ID_BASE = 100
+        private val MOD_NAMES = arrayOf(
+            "Цветной ник", "Бейдж у ника", "Прозрачный профиль", "Скрыть истории",
+            "Скрыть сторис", "Скрыть публикации", "Скрыть подписчиков", "Скрыть номер телефона",
+            "Скрыть юзернейм", "Скрыть дату рождения", "Скрыть статус", "Компактный профиль",
+            "Плоские карточки", "Без скруглений", "Яркие иконки", "Монохромные иконки",
+            "Приглушённый фон", "Режим модера", "Показывать ID", "Скрыть кнопки профиля"
+        )
+        private val MOD_KEYS = arrayOf(
+            "colored_name", "name_badge", "transparent_profile", "hide_history",
+            "hide_stories", "hide_posts", "hide_subscribers", "hide_phone",
+            "hide_username", "hide_birthday", "hide_status", "compact_profile",
+            "flat_cards", "no_rounding", "bright_icons", "mono_icons",
+            "dim_background", "moder_mode", "show_id", "hide_profile_buttons"
+        )
+    }
+
+    private var modMode = false
+
+    override fun createView(context: Context): View {
+        val view = super.createView(context)
+        val root = view as? FrameLayout ?: return view
+        val bar = LinearLayout(context).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER
+            setBackgroundColor(0xEE101018)
+        }
+        fun render() {
+            bar.removeAllViews()
+            for ((text, active) in arrayOf("Настройки" to !modMode, "Мод" to modMode)) {
+                val button = Button(context).apply {
+                    this.text = text
+                    isAllCaps = false
+                    textSize = 14f
+                    setTextColor(if (active) 0xFF1A1206 else Color.WHITE)
+                    setBackgroundColor(if (active) 0xFFC9A227 else Color.TRANSPARENT)
+                    setPadding(8, 12, 8, 12)
+                    layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+                    setOnClickListener {
+                        modMode = text == "Мод"
+                        render()
+                        listView.adapter?.update(true)
+                    }
+                }
+                bar.addView(button)
+            }
+        }
+        render()
+        root.addView(bar, FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM))
+        listView.setPadding(listView.paddingLeft, listView.paddingTop,
+            listView.paddingRight, AndroidUtilities.dp(64f))
+        return view
     }
 
     override fun getTitle(): String = getString(R.string.LocalOther)
 
     override fun fillItems(items: ArrayList<UItem>, adapter: UniversalAdapter) {
         val ctx = context ?: return
+
+        if (modMode) {
+            items.add(UItem.asHeader("Мод — 20 функций"))
+            MOD_NAMES.forEachIndexed { i, name ->
+                items.add(uCheck(MOD_ID_BASE + i, name,
+                    com.exteragram.messenger.roqi.RoqiMods.get(ctx, MOD_KEYS[i], true),
+                    subtext = "Локально на устройстве"))
+            }
+            items.add(UItem.asShadow())
+            return
+        }
 
         items.add(UItem.asHeader("RoqiGram"))
         items.add(uCheck(OtherItem.BANNER_ON, "Баннер профиля", RoqiProfileDecor.bannerEnabled(ctx), subtext = "Фон в шапке и за списком", icon = R.drawable.msg_theme))
@@ -97,8 +167,16 @@ class OtherPreferencesActivity : BasePreferencesActivity() {
     }
 
     override fun onClick(item: UItem, view: View, position: Int, x: Float, y: Float) {
-        if (item.id <= 0 || item.id > OtherItem.entries.size) return
         val ctx = context ?: return
+        if (item.id in MOD_ID_BASE until MOD_ID_BASE + MOD_NAMES.size) {
+            val i = item.id - MOD_ID_BASE
+            toggleBooleanSettingAndRefresh(item) {
+                com.exteragram.messenger.roqi.RoqiMods.set(ctx, MOD_KEYS[i], it)
+            }
+            rebuild()
+            return
+        }
+        if (item.id <= 0 || item.id > OtherItem.entries.size) return
         when (OtherItem.entries[item.id - 1]) {
             OtherItem.BANNER_ON -> {
                 toggleBooleanSettingAndRefresh(item) { RoqiProfileDecor.setBannerEnabled(ctx, it) }
