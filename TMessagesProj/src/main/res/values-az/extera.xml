@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 
- This is the source code of exteraGram for Android.
+ This is the source code of RoqiGram for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
 
- Copyright @exteraGram, 2022-2026
+ Copyright @RoqiGram, 2022-2026
 
 -->
 <resources>
-    <string name="Preferences">exteraGram tənzimləmələri</string>
+    <string name="Preferences">RoqiGram tənzimləmələri</string>
     <!-- Main Menu -->
     <string name="Links">Bağlantılar</string>
     <string name="Crowdin">Tərcümə</string>
@@ -138,8 +138,8 @@
     <string name="CopyID">İstifadəçi ID-sini kopyala</string>
     <!-- Other -->
     <string name="RestartRequired">Effektiv olmaq üçün Tətbiqi yenidən başladın.</string>
-    <string name="ResetPreferences">**exteraGram** tənzimləmələri sıfırlandı.</string>
-    <string name="ResetPreferencesInfo">**bütün** exteraGram tənzimləmələrini defolt olaraq sıfırlamaq istədiyinizə əminsiniz?</string>
+    <string name="ResetPreferences">**RoqiGram** tənzimləmələri sıfırlandı.</string>
+    <string name="ResetPreferencesInfo">**bütün** RoqiGram tənzimləmələrini defolt olaraq sıfırlamaq istədiyinizə əminsiniz?</string>
     <string name="UserNotFound">Bu **ID** ilə istifadəçi tapılmadı.</string>
     <string name="PhotoCopied">Foto buferə kopyalandı.</string>
     <string name="MutualContactInfo">Bu əlaqə qarşılıqlıdır.</string>

@@ -13,7 +13,7 @@
 
 <resources>
     <string name="exteraAppName" translatable="false">RoqiGram</string>
-    <string name="RoqiAbout">RoqiGram — forks exteraGram. Built with love for my users.</string>
+    <string name="RoqiAbout">RoqiGram — forks RoqiGram. Built with love for my users.</string>
     <string name="RoqiPremiumForever">Premium Forever — 50 ₽ once</string>
     <string name="RoqiPremiumMonthly">Premium Monthly — 10 ₽/month</string>
     <string name="Preferences">Настройки RoqiGram</string>
