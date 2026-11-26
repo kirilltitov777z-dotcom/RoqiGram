@@ -118,7 +118,7 @@ public final class RoqiProfileDecor {
                     animator.setRepeatMode(ValueAnimator.REVERSE);
                     animator.addUpdateListener(a -> wave.setAlpha((Float) a.getAnimatedValue()));
                     animator.start();
-                    panel.setTag(TAG, animator);
+                    panel.setTag(animator);
                 }
             }
         } catch (Throwable ignored) {}
