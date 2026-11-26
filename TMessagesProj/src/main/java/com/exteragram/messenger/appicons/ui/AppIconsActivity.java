@@ -43,7 +43,6 @@ import com.exteragram.messenger.appicons.AppIconController;
 import com.exteragram.messenger.appicons.AppIconPreviewLoader;
 import com.exteragram.messenger.appicons.ui.components.AppIconBulletinLayout;
 import com.exteragram.messenger.appicons.ui.components.AppIconCell;
-import com.exteragram.messenger.roqi.RoqiPremium;
 import com.exteragram.messenger.appicons.ui.components.AppIconHeroView;
 import com.exteragram.messenger.utils.ui.ChatHeaderUiHelper;
 
@@ -222,12 +221,6 @@ public class AppIconsActivity extends BaseFragment {
         }
 
         for (AppIcon icon : icons) {
-            if (icon.id != null && icon.id.startsWith("roqi")) {
-                try {
-                    int index = Integer.parseInt(icon.id.substring(4));
-                    if (index > 3 && !RoqiPremium.isPremium()) continue;
-                } catch (NumberFormatException ignored) {}
-            }
             items.add(AppIconCell.Factory.asAppIcon(icon, icon == previewIcon));
         }
     }

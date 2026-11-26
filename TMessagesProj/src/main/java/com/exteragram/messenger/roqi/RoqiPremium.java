@@ -236,38 +236,19 @@ public final class RoqiPremium {
     }
 
     public static boolean isForever() {
-        return "F".equals(deobfuscate(prefs().getString(K_TYPE, null))) && isActive();
+        return true;
     }
+
 
     public static boolean isActive() {
-        String key = deobfuscate(prefs().getString(K_KEY, null));
-        if (key == null || isRevoked(key)) return false;
-        long tg = prefs().getLong(K_TGID, -1);
-        long current = 0;
-        try {
-            org.telegram.tgnet.TLRPC.User user = UserConfig.getInstance(UserConfig.selectedAccount).getCurrentUser();
-            if (user != null) current = user.id;
-        } catch (Throwable ignored) {}
-        if (tg == 0 && current != 0) {
-            // The key was activated before login. Bind it to the first account that appears.
-            prefs().edit().putLong(K_TGID, current).apply();
-        } else if (tg != 0 && tg != -1 && current != 0 && tg != current) {
-            return false;
-        } else if (tg != 0 && tg != -1 && current == 0) {
-            return false;
-        }
-        String type = deobfuscate(prefs().getString(K_TYPE, null));
-        if ("F".equals(type)) return true;
-        if ("M".equals(type)) {
-            long expires = prefs().getLong(K_EXPIRES, 0);
-            return expires > System.currentTimeMillis();
-        }
-        return false;
+        return true;
     }
 
+
     public static boolean isPremium() {
-        return isActive();
+        return true;
     }
+
 
     public static int daysLeft() {
         if (!"M".equals(deobfuscate(prefs().getString(K_TYPE, null)))) return -1;
@@ -276,13 +257,9 @@ public final class RoqiPremium {
     }
 
     public static String statusText() {
-        if (isForever()) return "Premium Forever — активен бессрочно";
-        if (isActive()) return "Premium Monthly — активен до " + dateText()
-                + " (осталось " + daysLeft() + " дн.)";
-        if ("M".equals(deobfuscate(prefs().getString(K_TYPE, null))) && daysLeft() == 0)
-            return "Premium Monthly — истёк. Продлить 10 ₽/мес → @Cafulu";
-        return "Premium не активирован";
+        return "Все функции RoqiGram бесплатны";
     }
+
 
     private static String dateText() {
         java.text.SimpleDateFormat f = new java.text.SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
@@ -290,8 +267,9 @@ public final class RoqiPremium {
     }
 
     public static boolean showBadge() {
-        return isActive() && prefs().getBoolean(K_BADGE, true);
+        return true;
     }
+
 
     public static void setShowBadge(boolean value) {
         prefs().edit().putBoolean(K_BADGE, value).apply();
