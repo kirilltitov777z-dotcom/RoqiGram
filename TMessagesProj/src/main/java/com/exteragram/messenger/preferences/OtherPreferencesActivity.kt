@@ -21,6 +21,8 @@ import java.io.File
 import java.io.FileOutputStream
 import java.util.ArrayList
 import java.util.Locale
+import com.exteragram.messenger.useGoogleAnalytics
+import com.exteragram.messenger.useGoogleCrashlytics
 import com.exteragram.messenger.backup.PreferencesUtils
 import com.exteragram.messenger.export.ui.ExportActivity
 import com.exteragram.messenger.roqi.RoqiProfileDecor
@@ -28,6 +30,7 @@ import org.telegram.messenger.AndroidUtilities
 import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.FileLog
 import org.telegram.messenger.LocaleController
+import org.telegram.messenger.NotificationCenter
 import org.telegram.messenger.LocaleController.getString
 import org.telegram.messenger.R
 import org.telegram.messenger.Utilities
