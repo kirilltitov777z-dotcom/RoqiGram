@@ -214,7 +214,7 @@
     <string name="TranslationProvider">翻译源</string>
     <string name="TranslationTarget">目标语言</string>
     <string name="TranslationTargetApp">跟随应用</string>
-    <string name="ShowTranslateChatButtonLocked">选择其他翻译源或订阅 **Telegram Premium**。</string>
+    <string name="ShowTranslateChatButtonLocked">选择其他翻译源或订阅 **RoqiGram Premium**。</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">禁用数字舍入</string>
     <string name="FormatTimeWithSeconds">时间精确到秒</string>
@@ -244,7 +244,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">隐藏手机号码</string>
     <string name="ShowIdAndDc">显示用户 ID 和 DC（数据中心）</string>
-    <string name="ShowIdAndDcInfo">Telegram API 会原样显示 ID；Bot API 会在群组 ID 前添加负号，在超级群组和频道 ID 前添加 -100。</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API 会原样显示 ID；Bot API 会在群组 ID 前添加负号，在超级群组和频道 ID 前添加 -100。</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">隐藏已归档文件夹</string>
     <string name="ArchiveOnPull">下拉打开已归档聊天</string>
@@ -491,7 +491,7 @@
     <string name="AIOnDeviceFastModel">快速模型</string>
     <string name="AIReplaceTelegramEditorInfo">翻译、润色和校对</string>
     <string name="AIReplaceTelegramSummariesInfo">总结长消息</string>
-    <string name="AIReplaceTelegramInfo">选定的功能使用您的 AI 服务而不是 Telegram 服务器，没有 Premium 限制。</string>
+    <string name="AIReplaceTelegramInfo">选定的功能使用您的 AI 服务而不是 RoqiGram 服务器，没有 Premium 限制。</string>
     <string name="AIOnDeviceManage">AICore 设置</string>
     <string name="AIOnDeviceManageUnavailable">此设备不支持 AICore 系统设置。</string>
     <string name="AIChangeModel">更改</string>
@@ -564,7 +564,7 @@
     <string name="InlineDocPercentInfo">折扣、加价、千与百万</string>
     <string name="InlineDocPercentText">+ 或 − 之后的百分比，以其左侧的数字为基数计算。</string>
     <string name="InlineDocShorthandsText">“k”表示千，“kk”表示百万；“thousand”和“million”同样有效。</string>
-    <string name="InlineDocCurrenciesInfo">法币、加密货币与 Telegram Stars</string>
+    <string name="InlineDocCurrenciesInfo">法币、加密货币与 RoqiGram Stars</string>
     <string name="InlineDocCurrencyText">未使用“to”或“in”时，金额将换算为默认货币。</string>
     <string name="InlineDocUnitsInfo">长度、重量、温度、速度、时间</string>
     <string name="InlineDocUnitsText">未使用“to”或“in”时，其他制式的单位会换算为您所选的计量单位制，本制式的单位则换算为更便于阅读的单位。</string>
@@ -728,7 +728,7 @@
     <string name="PluginsEmptyInfo">在插件目录中选择插件，或前往 @exteraPlugins 获取更多。</string>
     <string name="PluginCatalogOpen">打开插件目录</string>
     <string name="PluginCatalog">插件目录</string>
-    <string name="PluginCatalogInfo">浏览发布在 Telegram 频道和 Git 仓库中的插件，轻点即可安装。</string>
+    <string name="PluginCatalogInfo">浏览发布在 RoqiGram 频道和 Git 仓库中的插件，轻点即可安装。</string>
     <string name="PluginCatalogVerified">已验证</string>
     <string name="PluginCatalogYourRepositories">您的仓库</string>
     <string name="PluginCatalogAddRepository">添加仓库</string>
@@ -1001,7 +1001,7 @@
     <string name="EmojiSavedHint">Emoji 已保存到图库。</string>
     <string name="GifGallerySavedHint">GIF 已保存到图库。</string>
     <string name="MutualContactInfo">此为双向联系人。</string>
-    <string name="LocalPremiumEmojiHint">您没有 **Telegram Premium** 订阅，所以只有 **RoqiGram** 用户可以看到此 emoji。</string>
+    <string name="LocalPremiumEmojiHint">您没有 **RoqiGram Premium** 订阅，所以只有 **RoqiGram** 用户可以看到此 emoji。</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">隐藏联系人标签页</string>
     <string name="ShowContactsTab">显示联系人标签页</string>
@@ -1119,7 +1119,7 @@
     <string name="PlayerSpeedDescription">播放速度 %1$s。长按可查看更多选项</string>
     <string name="LyricsCredit">歌词：%1$s</string>
     <string name="LyricsOfferTitle">查找歌词？</string>
-    <string name="LyricsOfferText">曲名和艺术家将直接发送至 LRCLIB (lrclib.net) 和 lrcmux，不经过 Telegram。您可以在播放器菜单中关闭此功能。</string>
+    <string name="LyricsOfferText">曲名和艺术家将直接发送至 LRCLIB (lrclib.net) 和 lrcmux，不经过 RoqiGram。您可以在播放器菜单中关闭此功能。</string>
     <string name="LyricsOfferButton">搜索歌词</string>
     <string name="LyricsNotFoundTitle">未找到歌词</string>
     <string name="LyricsNotFoundText">此曲目的文件标签中没有歌词，在线也未找到。</string>

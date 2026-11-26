@@ -85,7 +85,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Amaga el número de telèfon</string>
     <string name="ShowIdAndDc">Mostra l\'ID i el DC</string>
-    <string name="ShowIdAndDcInfo">L\'API de Telegram mostra els ID tal com són, mentre que l\'API de Bot afegeix un signe menys per a grups i -100 per a supergrups i canals.</string>
+    <string name="ShowIdAndDcInfo">L\'API de RoqiGram mostra els ID tal com són, mentre que l\'API de Bot afegeix un signe menys per a grups i -100 per a supergrups i canals.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Amaga la carpeta d\'arxiu</string>
     <string name="ArchiveOnPull">Obre l\'arxiu en tirar cap avall</string>
@@ -343,7 +343,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Envia sempre en HD</string>
     <string name="HideCameraTile">Amaga la icona de càmera instantània</string>
-    <string name="HideCameraTileInfo">La icona de càmera serà substituïda per un botó flotant. En prémer-lo s\'obre la càmera de Telegram; en mantenir-lo premut s\'obre la càmera del sistema.</string>
+    <string name="HideCameraTileInfo">La icona de càmera serà substituïda per un botó flotant. En prémer-lo s\'obre la càmera de RoqiGram; en mantenir-lo premut s\'obre la càmera del sistema.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Salt de temps amb doble toc</string>
     <string name="PreferOriginalQuality">Prefereix la qualitat original</string>
@@ -521,7 +521,7 @@
     <string name="EmojiSavedHint">Emoji desat a la galeria.</string>
     <string name="GifGallerySavedHint">GIF desat a la galeria.</string>
     <string name="MutualContactInfo">Aquest contacte és mutu.</string>
-    <string name="LocalPremiumEmojiHint">No tens subscripció a **Telegram Premium**, per tant només els usuaris d\'**RoqiGram** podran veure aquest emoji.</string>
+    <string name="LocalPremiumEmojiHint">No tens subscripció a **RoqiGram Premium**, per tant només els usuaris d\'**RoqiGram** podran veure aquest emoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Amaga la pestanya de contactes</string>
     <string name="ShowContactsTab">Mostra la pestanya de contactes</string>

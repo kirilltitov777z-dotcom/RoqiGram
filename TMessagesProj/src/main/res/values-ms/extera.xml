@@ -85,7 +85,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Sembunyi Nombor Telefon</string>
     <string name="ShowIdAndDc">Tunjuk ID dan DC</string>
-    <string name="ShowIdAndDcInfo">API Telegram menunjukkan ID sebagaimana adanya, manakala API Bot menambah tanda tolak untuk kumpulan dan -100 untuk superkumpulan dan saluran.</string>
+    <string name="ShowIdAndDcInfo">API RoqiGram menunjukkan ID sebagaimana adanya, manakala API Bot menambah tanda tolak untuk kumpulan dan -100 untuk superkumpulan dan saluran.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Sembunyi Folder Arkib</string>
     <string name="ArchiveOnPull">Buka Arkib pada Tarik-turun</string>
@@ -343,7 +343,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Sentiasa Hantar dalam HD</string>
     <string name="HideCameraTile">Sembunyi Jubin Kamera Segera</string>
-    <string name="HideCameraTileInfo">Jubin kamera akan digantikan dengan butang terapung. Menekannya melancarkan kamera Telegram; menahannya melancarkan kamera sistem.</string>
+    <string name="HideCameraTileInfo">Jubin kamera akan digantikan dengan butang terapung. Menekannya melancarkan kamera RoqiGram; menahannya melancarkan kamera sistem.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Masa Lompat Ketik Dua Kali</string>
     <string name="PreferOriginalQuality">Utamakan Kualiti Asal</string>
@@ -520,7 +520,7 @@
     <string name="EmojiSavedHint">Emoji disimpan ke galeri.</string>
     <string name="GifGallerySavedHint">GIF disimpan ke galeri.</string>
     <string name="MutualContactInfo">Hubungan ini adalah bersama.</string>
-    <string name="LocalPremiumEmojiHint">Anda tidak mempunyai langganan **Telegram Premium**, jadi hanya pengguna **RoqiGram** yang akan dapat melihat emoji ini.</string>
+    <string name="LocalPremiumEmojiHint">Anda tidak mempunyai langganan **RoqiGram Premium**, jadi hanya pengguna **RoqiGram** yang akan dapat melihat emoji ini.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Sembunyi Tab Kenalan</string>
     <string name="ShowContactsTab">Tunjuk Tab Kenalan</string>

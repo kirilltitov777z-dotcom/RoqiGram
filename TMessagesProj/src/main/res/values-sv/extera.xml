@@ -85,7 +85,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Dölj telefonnummer</string>
     <string name="ShowIdAndDc">Visa ID och DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API visar ID som de är, medan Bot API lägger till ett minustecken för grupper och -100 för supergrupper och kanaler.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API visar ID som de är, medan Bot API lägger till ett minustecken för grupper och -100 för supergrupper och kanaler.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Dölj arkivmapp</string>
     <string name="ArchiveOnPull">Öppna arkiv vid nedåtdrag</string>
@@ -343,7 +343,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Skicka alltid i HD</string>
     <string name="HideCameraTile">Dölj omedelbar kameraruta</string>
-    <string name="HideCameraTileInfo">Kamerarutan ersätts av en flytande knapp. Tryckning startar Telegram-kameran; hållning startar systemkameran.</string>
+    <string name="HideCameraTileInfo">Kamerarutan ersätts av en flytande knapp. Tryckning startar RoqiGram-kameran; hållning startar systemkameran.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Hopptid vid dubbeltryck</string>
     <string name="PreferOriginalQuality">Föredra originalkvalitet</string>
@@ -517,7 +517,7 @@
     <string name="EmojiSavedHint">Emoji sparad i galleriet.</string>
     <string name="GifGallerySavedHint">GIF sparad i galleriet.</string>
     <string name="MutualContactInfo">Denna kontakt är ömsesidig.</string>
-    <string name="LocalPremiumEmojiHint">Du har inte ett **Telegram Premium**-abonnemang, så endast **RoqiGram**-användare kommer att kunna se denna emoji.</string>
+    <string name="LocalPremiumEmojiHint">Du har inte ett **RoqiGram Premium**-abonnemang, så endast **RoqiGram**-användare kommer att kunna se denna emoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Dölj kontakter-flik</string>
     <string name="ShowContactsTab">Visa kontakter-flik</string>

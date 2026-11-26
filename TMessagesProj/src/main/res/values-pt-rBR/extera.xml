@@ -60,7 +60,7 @@
     <string name="TranslationProvider">Provedor de Tradução</string>
     <string name="TranslationTarget">Idioma de Destino</string>
     <string name="TranslationTargetApp">Seguir Aplicativo</string>
-    <string name="ShowTranslateChatButtonLocked">Escolha outro provedor de tradução ou assine o **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">Escolha outro provedor de tradução ou assine o **RoqiGram Premium**.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">Desativar arredondamento de números</string>
     <string name="FormatTimeWithSeconds">Formatar a hora com segundos</string>
@@ -89,7 +89,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Ocultar número do telefone</string>
     <string name="ShowIdAndDc">Mostrar ID e DC</string>
-    <string name="ShowIdAndDcInfo">O Telegram API mostra os IDs como eles são, enquanto o Bot API adiciona um sinal de menos para grupos e -100 para supergrupos, grupos de transmissão e canais.</string>
+    <string name="ShowIdAndDcInfo">O RoqiGram API mostra os IDs como eles são, enquanto o Bot API adiciona um sinal de menos para grupos e -100 para supergrupos, grupos de transmissão e canais.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Ocultar Pasta de Arquivos</string>
     <string name="ArchiveOnPull">Abrir conversas arquivadas ao deslizar para baixo</string>
@@ -320,7 +320,7 @@
     <string name="AIOnDeviceRefresh">Atualizar status</string>
     <string name="AIOnDevicePreviewModel">Visualizar modelo</string>
     <string name="AIOnDeviceFastModel">Modelo rápido</string>
-    <string name="AIReplaceTelegram">IA do Telegram</string>
+    <string name="AIReplaceTelegram">IA do RoqiGram</string>
     <string name="AIReplaceTelegramEditorInfo">Traduzir, reajustar e revisar rascunhos</string>
     <string name="AIReplaceTelegramSummariesInfo">Resumir mensagens e publicações longas</string>
     <string name="AIOnDeviceManage">Configurações do AICore</string>
@@ -411,7 +411,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Sempre enviar em HD</string>
     <string name="HideCameraTile">Ocultar bloco de câmera instantânea</string>
-    <string name="HideCameraTileInfo">O bloco da câmera será substituído por um botão flutuante. Pressionar o botão abrirá a câmera do Telegram, enquanto mantê-lo pressionado abrirá a câmera do sistema.</string>
+    <string name="HideCameraTileInfo">O bloco da câmera será substituído por um botão flutuante. Pressionar o botão abrirá a câmera do RoqiGram, enquanto mantê-lo pressionado abrirá a câmera do sistema.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Duração do intervalo por toque duplo</string>
     <string name="PreferOriginalQuality">Preferir Qualidade Original</string>
@@ -614,7 +614,7 @@
     <string name="EmojiSavedHint">Emoji salvo na galeria.</string>
     <string name="GifGallerySavedHint">GIF salvo na galeria.</string>
     <string name="MutualContactInfo">Este contato é mútuo.</string>
-    <string name="LocalPremiumEmojiHint">Você não tem uma assinatura **Telegram Premium**, então apenas usuários **RoqiGram** poderão ver este emoji.</string>
+    <string name="LocalPremiumEmojiHint">Você não tem uma assinatura **RoqiGram Premium**, então apenas usuários **RoqiGram** poderão ver este emoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Ocultar aba Contatos</string>
     <string name="ShowContactsTab">Exibir aba de Contatos</string>

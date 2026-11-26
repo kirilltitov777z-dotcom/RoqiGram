@@ -61,7 +61,7 @@
     <!-- Translator -->
     <string name="TranslationTarget">كيف حالك</string>
     <string name="TranslationTargetApp">اللغة الإفتراضية</string>
-    <string name="ShowTranslateChatButtonLocked">اختر مزوّد ترجمة آخر أو اشترك في **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">اختر مزوّد ترجمة آخر أو اشترك في **RoqiGram Premium**.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">تعطيل تقريب الأرقام</string>
     <string name="FormatTimeWithSeconds">تنسيق الوقت بالثواني</string>
@@ -373,7 +373,7 @@
     <string name="TapToCopy">اضغط للنسخ</string>
     <string name="ProfileUsesEmojiPack">يستخدم هذا الملف الشخصي إيموجي من حزمة %s لخلفيته.</string>
     <string name="GifGallerySavedHint">تم حفظ GIF في المعرض.</string>
-    <string name="LocalPremiumEmojiHint">ليس لديك اشتراك **Telegram Premium**، لذلك سيتمكن مستخدمو **RoqiGram** فقط من رؤية هذا الإيموجي.</string>
+    <string name="LocalPremiumEmojiHint">ليس لديك اشتراك **RoqiGram Premium**، لذلك سيتمكن مستخدمو **RoqiGram** فقط من رؤية هذا الإيموجي.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">إخفاء علامة تبويب جهات الاتصال</string>
     <string name="ShowContactsTab">إظهار علامة تبويب جهات الاتصال</string>

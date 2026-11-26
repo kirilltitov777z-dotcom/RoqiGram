@@ -86,7 +86,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Telefonszám elrejtése</string>
     <string name="ShowIdAndDc">ID és DC megjelenítése</string>
-    <string name="ShowIdAndDcInfo">A Telegram API az ID-kat úgy mutatja, ahogy vannak, míg a Bot API mínuszjelet ad a csoportokhoz és -100-at a szupercsoportokhoz és csatornákhoz.</string>
+    <string name="ShowIdAndDcInfo">A RoqiGram API az ID-kat úgy mutatja, ahogy vannak, míg a Bot API mínuszjelet ad a csoportokhoz és -100-at a szupercsoportokhoz és csatornákhoz.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Archívum mappa elrejtése</string>
     <string name="ArchiveOnPull">Archívum megnyitása legördítésre</string>
@@ -348,7 +348,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Mindig HD-ben küldés</string>
     <string name="HideCameraTile">Azonnali kamera csempe elrejtése</string>
-    <string name="HideCameraTileInfo">A kamera csempe helyét egy lebegő gomb veszi át. Megnyomása elindítja a Telegram kamerát; lenyomva tartva a rendszerkamerát.</string>
+    <string name="HideCameraTileInfo">A kamera csempe helyét egy lebegő gomb veszi át. Megnyomása elindítja a RoqiGram kamerát; lenyomva tartva a rendszerkamerát.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Dupla koppintás ugrási idő</string>
     <string name="PreferOriginalQuality">Eredeti minőség preferálása</string>
@@ -527,7 +527,7 @@
     <string name="EmojiSavedHint">Emoji mentve a galériába.</string>
     <string name="GifGallerySavedHint">GIF mentve a galériába.</string>
     <string name="MutualContactInfo">Ez a kapcsolat kölcsönös.</string>
-    <string name="LocalPremiumEmojiHint">Nincs **Telegram Premium** előfizetésed, így csak az **RoqiGram** felhasználók láthatják ezt az emojit.</string>
+    <string name="LocalPremiumEmojiHint">Nincs **RoqiGram Premium** előfizetésed, így csak az **RoqiGram** felhasználók láthatják ezt az emojit.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Névjegyek fül elrejtése</string>
     <string name="ShowContactsTab">Névjegyek fül megjelenítése</string>

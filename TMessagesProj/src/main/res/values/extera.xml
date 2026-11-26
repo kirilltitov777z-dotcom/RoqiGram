@@ -247,7 +247,7 @@
     <string name="TranslationProvider">Translation Provider</string>
     <string name="TranslationTarget">Target Language</string>
     <string name="TranslationTargetApp">Follow App</string>
-    <string name="ShowTranslateChatButtonLocked">Choose another translation provider or subscribe to **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">Choose another translation provider or subscribe to **RoqiGram Premium**.</string>
 
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">Disable Number Rounding</string>
@@ -283,7 +283,7 @@
     <string name="HidePhoneNumber">Hide Phone Number</string>
     <string name="DefaultProfileTab">Default Tab</string>
     <string name="ShowIdAndDc">Show ID and DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API shows IDs as they are, while the Bot API adds a minus sign for groups and -100 for supergroups and channels.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API shows IDs as they are, while the Bot API adds a minus sign for groups and -100 for supergroups and channels.</string>
 
     <!-- Archive -->
     <string name="HideArchiveFolder">Hide Archive Folder</string>
@@ -567,10 +567,10 @@
     <string name="AIOnDeviceRefresh">Refresh status</string>
     <string name="AIOnDevicePreviewModel">Preview model</string>
     <string name="AIOnDeviceFastModel">Fast model</string>
-    <string name="AIReplaceTelegram">Telegram AI</string>
+    <string name="AIReplaceTelegram">RoqiGram AI</string>
     <string name="AIReplaceTelegramEditorInfo">Translate, restyle and proofread drafts</string>
     <string name="AIReplaceTelegramSummariesInfo">Summarize long messages and posts</string>
-    <string name="AIReplaceTelegramInfo">Selected features use your AI service instead of Telegram servers, without Premium limits.</string>
+    <string name="AIReplaceTelegramInfo">Selected features use your AI service instead of RoqiGram servers, without Premium limits.</string>
     <string name="AIOnDeviceManage">AICore settings</string>
     <string name="AIOnDeviceManageUnavailable">System settings for AICore are not available on this device.</string>
     <string name="AIChangeModel">Change</string>
@@ -648,7 +648,7 @@
     <string name="InlineDocPercentInfo">Discounts, markups, thousands and millions</string>
     <string name="InlineDocPercentText">A percentage after + or − is taken from the number on its left.</string>
     <string name="InlineDocShorthandsText">\"k\" means a thousand and \"kk\" a million. \"thousand\" and \"million\" work too.</string>
-    <string name="InlineDocCurrenciesInfo">Money, crypto and Telegram Stars</string>
+    <string name="InlineDocCurrenciesInfo">Money, crypto and RoqiGram Stars</string>
     <string name="InlineDocCurrencyText">Without \"to\" or \"in\", an amount converts to the default currency.</string>
     <string name="InlineDocUnitsInfo">Length, weight, temperature, speed, time</string>
     <string name="InlineDocUnitsText">Without \"to\" or \"in\", foreign units convert to your measurement system, and your own ones to a handier unit.</string>
@@ -717,7 +717,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Always Send in HD</string>
     <string name="HideCameraTile">Hide Instant Camera Tile</string>
-    <string name="HideCameraTileInfo">The camera tile will be replaced by a floating button. Pressing it launches the Telegram camera; holding it launches the system camera.</string>
+    <string name="HideCameraTileInfo">The camera tile will be replaced by a floating button. Pressing it launches the RoqiGram camera; holding it launches the system camera.</string>
     <string name="ShortStandardQuality">SD</string>
 
     <!-- Playback -->
@@ -803,7 +803,7 @@
     <string name="ExportFormatJson">JSON</string>
     <string name="ExportFormatBoth">HTML and JSON</string>
     <string name="ExportStart">Export</string>
-    <string name="ExportInfo">HTML is easy to read in a browser, JSON is compatible with Telegram Desktop exports.</string>
+    <string name="ExportInfo">HTML is easy to read in a browser, JSON is compatible with RoqiGram Desktop exports.</string>
     <string name="ExportStoragePermission">Storage access is required to save the export.</string>
     <string name="ExportProgressTitle">Exporting Data</string>
     <string name="ExportStateInitializing">Initializing</string>
@@ -825,14 +825,14 @@
     <string name="ExportFailed">Export Failed</string>
     <string name="ExportFailedPanelInfo">Tap to see details</string>
     <string name="ExportFailedNotification">Something went wrong while exporting your data.</string>
-    <string name="ExportErrorApi">Telegram returned an error: %1$s</string>
+    <string name="ExportErrorApi">RoqiGram returned an error: %1$s</string>
     <string name="ExportErrorIo">Couldn\'t write the file:\n%1$s</string>
-    <string name="ExportIntro">Save a copy of your Telegram data to this device: account information, chats and media.</string>
+    <string name="ExportIntro">Save a copy of your RoqiGram data to this device: account information, chats and media.</string>
     <string name="ExportIntroChat">Save a copy of this chat\'s history and media to this device.</string>
     <string name="ExportDataInfo">Secret chats are stored only on your devices and can\'t be exported.</string>
     <string name="ExportSizeLimitInfo">Larger files are skipped. The export keeps a note about them in place of the file.</string>
     <string name="ExportDelayTitle">Export is not available yet</string>
-    <string name="ExportDelayUntil">For security reasons Telegram will allow this export on %1$s. Repeat the request from this device then.</string>
+    <string name="ExportDelayUntil">For security reasons RoqiGram will allow this export on %1$s. Repeat the request from this device then.</string>
     <string name="ExportAvailableFrom">Available on %1$s</string>
     <string name="ExportShowProgress">Show Progress</string>
     <string name="ExportContinueInBackground">Continue in Background</string>
@@ -926,7 +926,7 @@
     <string name="PluginsEmptyInfo">Pick plugins in the catalog or find more in @exteraPlugins.</string>
     <string name="PluginCatalogOpen">Open Catalog</string>
     <string name="PluginCatalog">Plugin Catalog</string>
-    <string name="PluginCatalogInfo">Browse plugins published in Telegram channels and Git repositories and install them in a tap.</string>
+    <string name="PluginCatalogInfo">Browse plugins published in RoqiGram channels and Git repositories and install them in a tap.</string>
     <string name="PluginCatalogVerified">Verified</string>
     <string name="PluginCatalogYourRepositories">Your Repositories</string>
     <string name="PluginCatalogAddRepository">Add Repository</string>
@@ -1228,7 +1228,7 @@
     <string name="EmojiSavedHint">Emoji saved to gallery.</string>
     <string name="GifGallerySavedHint">GIF saved to gallery.</string>
     <string name="MutualContactInfo">This contact is mutual.</string>
-    <string name="LocalPremiumEmojiHint">You do not have a **Telegram Premium** subscription, so only **RoqiGram** users will be able to see this emoji.</string>
+    <string name="LocalPremiumEmojiHint">You do not have a **RoqiGram Premium** subscription, so only **RoqiGram** users will be able to see this emoji.</string>
 
     <!-- Main Tabs -->
     <string name="HideContactsTab">Hide Contacts Tab</string>
@@ -1371,7 +1371,7 @@
     <string name="PlayerSpeedDescription">Playback speed %1$s. Hold for more options</string>
     <string name="LyricsCredit">Lyrics: %1$s</string>
     <string name="LyricsOfferTitle">Find the Lyrics?</string>
-    <string name="LyricsOfferText">The track title and artist will be sent directly to LRCLIB (lrclib.net) and lrcmux, not through Telegram. You can turn this off in the player menu.</string>
+    <string name="LyricsOfferText">The track title and artist will be sent directly to LRCLIB (lrclib.net) and lrcmux, not through RoqiGram. You can turn this off in the player menu.</string>
     <string name="LyricsOfferButton">Search Lyrics</string>
     <string name="LyricsNotFoundTitle">No Lyrics Found</string>
     <string name="LyricsNotFoundText">There are no lyrics for this track in the file tags or online.</string>

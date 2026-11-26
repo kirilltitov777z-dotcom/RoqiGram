@@ -57,7 +57,7 @@
     <string name="TranslationProvider">Oʻzbekcha</string>
     <string name="TranslationTarget">Oʻzbekcha</string>
     <string name="TranslationTargetApp">Ilovani kuzatish</string>
-    <string name="ShowTranslateChatButtonLocked">Boshqa tarjima xizmatini tanlang yoki **Telegram Premium** obunasini rasmiylashtiring.</string>
+    <string name="ShowTranslateChatButtonLocked">Boshqa tarjima xizmatini tanlang yoki **RoqiGram Premium** obunasini rasmiylashtiring.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">Raqamlarni yaxlitlashni o‘chirish</string>
     <string name="FormatTimeWithSeconds">Vaqtni soniyalar bilan ko‘rsatish</string>
@@ -85,7 +85,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Telefon raqamni berkitish</string>
     <string name="ShowIdAndDc">ID va DC ko‘rsatish</string>
-    <string name="ShowIdAndDcInfo">Telegram API ID raqamlarini o‘zgarishsiz ko‘rsatadi, Bot API esa guruhlar uchun minus belgisini, superguruhlar va kanallar uchun esa -100 ni qo‘shadi.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API ID raqamlarini o‘zgarishsiz ko‘rsatadi, Bot API esa guruhlar uchun minus belgisini, superguruhlar va kanallar uchun esa -100 ni qo‘shadi.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Arxiv jildini yashirish</string>
     <string name="ArchiveOnPull">Arxivni pastga tortishda ochish</string>
@@ -308,7 +308,7 @@
     <string name="AIOnDeviceFastModel">Tezkor model</string>
     <string name="AIReplaceTelegramEditorInfo">Qoralamalarni tarjima qilish, uslubini o‘zgartirish va tekshirish</string>
     <string name="AIReplaceTelegramSummariesInfo">Uzun xabarlar va postlarni qisqacha mazmunlash</string>
-    <string name="AIReplaceTelegramInfo">Tanlangan funksiyalar Premium cheklovlarisiz Telegram serverlari o‘rniga AI xizmatingizdan foydalanadi.</string>
+    <string name="AIReplaceTelegramInfo">Tanlangan funksiyalar Premium cheklovlarisiz RoqiGram serverlari o‘rniga AI xizmatingizdan foydalanadi.</string>
     <string name="AIOnDeviceManage">AICore sozlamalari</string>
     <string name="AIOnDeviceManageUnavailable">Bu qurilmada AICore uchun tizim sozlamalari mavjud emas.</string>
     <string name="AIChangeModel">O‘zgartirish</string>
@@ -589,7 +589,7 @@
     <string name="EmojiSavedHint">Emoji galereyaga saqlandi.</string>
     <string name="GifGallerySavedHint">GIF galereyaga saqlandi.</string>
     <string name="MutualContactInfo">Ushbu foydalanuvchining kontaktidasiz.</string>
-    <string name="LocalPremiumEmojiHint">Sizda **Telegram Premium** obunasi yoʻq, shuning uchun bu emojini faqat **RoqiGram** foydalanuvchilari koʻra oladi.</string>
+    <string name="LocalPremiumEmojiHint">Sizda **RoqiGram Premium** obunasi yoʻq, shuning uchun bu emojini faqat **RoqiGram** foydalanuvchilari koʻra oladi.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Kontaktlar yorligʻini yashirish</string>
     <string name="ShowContactsTab">Kontaktlar yorligʻini koʻrsatish</string>

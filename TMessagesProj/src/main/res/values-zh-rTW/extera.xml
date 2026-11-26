@@ -32,7 +32,7 @@
     <string name="TabTitleStyleTextOnly">僅名稱</string>
     <string name="TabCounter">通知計數</string>
     <string name="HideAllChats">隱藏「%1$s」分頁</string>
-    <string name="FoldersInfo">圖示與 Telegram 官方同步。</string>
+    <string name="FoldersInfo">圖示與 RoqiGram 官方同步。</string>
     <string name="IconPack">圖示</string>
     <string name="BlurOptions">模糊選項</string>
     <string name="ForceSnow">強制「雪花」</string>
@@ -53,7 +53,7 @@
     <string name="SpeedBoostInfo">超級加速會在網際網路連線速度緩慢時出現下載檔案或串流視訊相關問題</string>
     <string name="HidePhoneNumber">隱藏手機號碼</string>
     <string name="ShowIdAndDc">顯示 ID 和 DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API 顯示的是 ID，而 Bot API 為群組新增了一個負號，為超級群組、廣播群組和頻道前新增了 -100。</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API 顯示的是 ID，而 Bot API 為群組新增了一個負號，為超級群組、廣播群組和頻道前新增了 -100。</string>
     <string name="ArchiveOnPull">下拉開啟已封存的內容</string>
     <string name="DisableUnarchiveSwipe">停用「取消封存」滑動</string>
     <string name="DisableUnarchiveSwipeInfo">向左滑動不會從封存中移除聊天。</string>

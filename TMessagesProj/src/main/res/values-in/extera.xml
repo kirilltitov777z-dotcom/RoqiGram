@@ -84,7 +84,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Sembunyikan Nomor Telepon</string>
     <string name="ShowIdAndDc">Tampilkan ID dan DC</string>
-    <string name="ShowIdAndDcInfo">API Telegram menampilkan ID apa adanya, sedangkan Bot API menambahkan tanda minus untuk grup dan -100 untuk supergrup dan saluran.</string>
+    <string name="ShowIdAndDcInfo">API RoqiGram menampilkan ID apa adanya, sedangkan Bot API menambahkan tanda minus untuk grup dan -100 untuk supergrup dan saluran.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Sembunyikan Folder Arsip</string>
     <string name="ArchiveOnPull">Buka Arsip saat Menarik Kebawah</string>
@@ -339,7 +339,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Selalu Kirim dalam HD</string>
     <string name="HideCameraTile">Sembunyikan Ubin Kamera Instan</string>
-    <string name="HideCameraTileInfo">Ubin kamera akan diganti dengan tombol mengambang. Menekannya akan meluncurkan kamera Telegram; menahannya akan meluncurkan kamera sistem.</string>
+    <string name="HideCameraTileInfo">Ubin kamera akan diganti dengan tombol mengambang. Menekannya akan meluncurkan kamera RoqiGram; menahannya akan meluncurkan kamera sistem.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Durasi Skip Ketuk Ganda</string>
     <string name="PreferOriginalQuality">Utamakan Kualitas Asli</string>
@@ -515,7 +515,7 @@
     <string name="EmojiSavedHint">Emoji disimpan ke galeri.</string>
     <string name="GifGallerySavedHint">GIF disimpan ke galeri.</string>
     <string name="MutualContactInfo">Kontak ini saling mengenal.</string>
-    <string name="LocalPremiumEmojiHint">Anda tidak memiliki langganan **Telegram Premium**, sehingga hanya pengguna **RoqiGram** yang dapat melihat emoji ini.</string>
+    <string name="LocalPremiumEmojiHint">Anda tidak memiliki langganan **RoqiGram Premium**, sehingga hanya pengguna **RoqiGram** yang dapat melihat emoji ini.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Sembunyikan Tab Kontak</string>
     <string name="ShowContactsTab">Tampilkan Tab Kontak</string>

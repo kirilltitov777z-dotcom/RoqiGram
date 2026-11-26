@@ -62,7 +62,7 @@
     <string name="TranslationProvider">ספק התרגומים</string>
     <string name="TranslationTarget">שפת היעד</string>
     <string name="TranslationTargetApp">עקוב אחר האפליקציה</string>
-    <string name="ShowTranslateChatButtonLocked">בחר ספק תרגום אחר או הירשם ל-**Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">בחר ספק תרגום אחר או הירשם ל-**RoqiGram Premium**.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">השבתת עיגול מספרים</string>
     <string name="FormatTimeWithSeconds">עיצוב זמן עם שניות</string>

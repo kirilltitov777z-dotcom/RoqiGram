@@ -218,7 +218,7 @@
     <string name="TranslationProvider">Постачальник перекладу</string>
     <string name="TranslationTarget">Цільова мова</string>
     <string name="TranslationTargetApp">Мова додатку</string>
-    <string name="ShowTranslateChatButtonLocked">Оберіть інший сервіс перекладу або оформіть **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">Оберіть інший сервіс перекладу або оформіть **RoqiGram Premium**.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">Вимкнути округлення чисел</string>
     <string name="FormatTimeWithSeconds">Форматувати час із секундами</string>
@@ -248,7 +248,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Приховати номер телефону</string>
     <string name="ShowIdAndDc">Показати ID та DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API показує ID такими, як вони є, в той час, як API бота додає знак мінус для груп і -100 для супергруп і каналів.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API показує ID такими, як вони є, в той час, як API бота додає знак мінус для груп і -100 для супергруп і каналів.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Приховати архів зі списку чатів</string>
     <string name="ArchiveOnPull">Відкрити архів при витягуванні</string>
@@ -474,10 +474,10 @@
     <string name="AIOnDeviceRefresh">Оновити стан</string>
     <string name="AIOnDevicePreviewModel">Бета-модель</string>
     <string name="AIOnDeviceFastModel">Швидка модель</string>
-    <string name="AIReplaceTelegram">ШІ Telegram</string>
+    <string name="AIReplaceTelegram">ШІ RoqiGram</string>
     <string name="AIReplaceTelegramEditorInfo">Переклад, зміна стилю та перевірка чернеток</string>
     <string name="AIReplaceTelegramSummariesInfo">Підсумок довгих повідомлень та постів</string>
-    <string name="AIReplaceTelegramInfo">Обрані функції використовують ваш сервіс ШІ замість серверів Telegram без обмежень Premium.</string>
+    <string name="AIReplaceTelegramInfo">Обрані функції використовують ваш сервіс ШІ замість серверів RoqiGram без обмежень Premium.</string>
     <string name="AIOnDeviceManage">Налаштування AICore</string>
     <string name="AIOnDeviceManageUnavailable">Системні налаштування для AICore недоступні на цьому пристрої.</string>
     <string name="AIChangeModel">Змінити</string>
@@ -550,7 +550,7 @@
     <string name="InlineDocPercentInfo">Знижки, націнки, тисячі та мільйони</string>
     <string name="InlineDocPercentText">Відсоток після + або − рахується від числа зліва.</string>
     <string name="InlineDocShorthandsText">«к» — тисяча, «кк» — мільйон. «тис» і «млн» теж працюють.</string>
-    <string name="InlineDocCurrenciesInfo">Гроші, криптовалюти та зірки Telegram</string>
+    <string name="InlineDocCurrenciesInfo">Гроші, криптовалюти та зірки RoqiGram</string>
     <string name="InlineDocCurrencyText">Без «в» сума переводиться у валюту за замовчуванням.</string>
     <string name="InlineDocUnitsInfo">Довжина, вага, температура, швидкість, час</string>
     <string name="InlineDocUnitsText">Без «в» чужі одиниці переводяться у вашу систему мір, а свої — у зручніші.</string>
@@ -615,7 +615,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Завжди надсилати в HD</string>
     <string name="HideCameraTile">Приховати плитку камери</string>
-    <string name="HideCameraTileInfo">Плитка камери буде замінена плавучою кнопкою. Натиск на неї запустить камеру Telegram; утримання - системну.</string>
+    <string name="HideCameraTileInfo">Плитка камери буде замінена плавучою кнопкою. Натиск на неї запустить камеру RoqiGram; утримання - системну.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Подвійний дотик для перемотки</string>
     <string name="PreferOriginalQuality">Перевага оригінальній якості</string>
@@ -947,7 +947,7 @@
     <string name="EmojiSavedHint">Емодзі збережено до галереї.</string>
     <string name="GifGallerySavedHint">GIF збережено до галереї.</string>
     <string name="MutualContactInfo">Цей контакт є взаємним.</string>
-    <string name="LocalPremiumEmojiHint">У вас немає підписки **Telegram Premium**, тому цю емодзі зможуть бачити лише користувачі **RoqiGram**.</string>
+    <string name="LocalPremiumEmojiHint">У вас немає підписки **RoqiGram Premium**, тому цю емодзі зможуть бачити лише користувачі **RoqiGram**.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Приховати вкладку «Контакти»</string>
     <string name="ShowContactsTab">Показати вкладку «Контакти»</string>
@@ -1062,7 +1062,7 @@
     <string name="PlayerSpeedDescription">Швидкість %1$s. Утримуйте для інших варіантів</string>
     <string name="LyricsCredit">Текст: %1$s</string>
     <string name="LyricsOfferTitle">Знайти текст пісні?</string>
-    <string name="LyricsOfferText">Назва та виконавець треку будуть надіслані в LRCLIB (lrclib.net) і lrcmux напряму, не через Telegram. Вимкнути пошук можна в меню плеєра.</string>
+    <string name="LyricsOfferText">Назва та виконавець треку будуть надіслані в LRCLIB (lrclib.net) і lrcmux напряму, не через RoqiGram. Вимкнути пошук можна в меню плеєра.</string>
     <string name="LyricsOfferButton">Шукати текст</string>
     <string name="LyricsNotFoundTitle">Текст не знайдено</string>
     <string name="LyricsNotFoundText">Ні в тегах файлу, ні в мережі тексту для цього треку немає.</string>

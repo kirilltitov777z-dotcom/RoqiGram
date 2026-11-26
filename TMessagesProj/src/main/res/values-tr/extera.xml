@@ -91,7 +91,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Telefon Numarasını Gizle</string>
     <string name="ShowIdAndDc">ID ve Veri Merkezini (DC) Göster</string>
-    <string name="ShowIdAndDcInfo">Telegram API kimlikleri doğrudan verir; Bot API ise grupların başına eksi (-), süper grup ve kanalların başına -100 ekler.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API kimlikleri doğrudan verir; Bot API ise grupların başına eksi (-), süper grup ve kanalların başına -100 ekler.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Arşiv Klasörünü Gizle</string>
     <string name="ArchiveOnPull">Aşağı Çekince Arşivi Aç</string>
@@ -330,10 +330,10 @@
     <string name="AIOnDeviceRefresh">Durumu Yenile</string>
     <string name="AIOnDevicePreviewModel">Ön izleme modeli</string>
     <string name="AIOnDeviceFastModel">Hızlı model</string>
-    <string name="AIReplaceTelegram">Telegram Yapay Zekâsı</string>
+    <string name="AIReplaceTelegram">RoqiGram Yapay Zekâsı</string>
     <string name="AIReplaceTelegramEditorInfo">Taslakları çevirin, üslubunu değiştirin ve yazım hatalarını giderin</string>
     <string name="AIReplaceTelegramSummariesInfo">Uzun iletileri ve gönderileri tek dokunuşla özetleyin</string>
-    <string name="AIReplaceTelegramInfo">Seçilen özellikler, Telegram sunucuları yerine kendi yapay zekâ servisinizi kullanır ve Premium sınırlamalarına takılmaz.</string>
+    <string name="AIReplaceTelegramInfo">Seçilen özellikler, RoqiGram sunucuları yerine kendi yapay zekâ servisinizi kullanır ve Premium sınırlamalarına takılmaz.</string>
     <string name="AIOnDeviceManage">AICore Ayarları</string>
     <string name="AIOnDeviceManageUnavailable">AICore sistem ayarları bu cihazda bulunmuyor.</string>
     <string name="AIChangeModel">Değiştir</string>
@@ -424,7 +424,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Her Zaman HD Kalitede Gönder</string>
     <string name="HideCameraTile">Kamera Karesini Gizle</string>
-    <string name="HideCameraTileInfo">Galeri içindeki kamera karesi yerine yüzen bir buton gösterilir. Butona dokununca Telegram kamerası, basılı tutunca telefonun kendi kamerası açılır.</string>
+    <string name="HideCameraTileInfo">Galeri içindeki kamera karesi yerine yüzen bir buton gösterilir. Butona dokununca RoqiGram kamerası, basılı tutunca telefonun kendi kamerası açılır.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Çift Dokunma Sarma Süresi</string>
     <string name="PreferOriginalQuality">Orijinal Kaliteyi Tercih Et</string>
@@ -633,7 +633,7 @@
     <string name="EmojiSavedHint">Emoji galeriye kaydedildi.</string>
     <string name="GifGallerySavedHint">GIF galeriye kaydedildi.</string>
     <string name="MutualContactInfo">Bu kişiyle birbirinizin rehberinde ekli durumdasınız.</string>
-    <string name="LocalPremiumEmojiHint">**Telegram Premium** aboneliğiniz olmadığı için bu emojiyi yalnızca diğer **RoqiGram** kullanıcıları görebilir.</string>
+    <string name="LocalPremiumEmojiHint">**RoqiGram Premium** aboneliğiniz olmadığı için bu emojiyi yalnızca diğer **RoqiGram** kullanıcıları görebilir.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Kişiler Sekmesini Gizle</string>
     <string name="ShowContactsTab">Kişiler Sekmesini Göster</string>

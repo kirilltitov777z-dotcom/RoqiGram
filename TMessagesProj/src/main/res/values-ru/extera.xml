@@ -386,7 +386,7 @@
     <string name="TranslationProvider">Сервис перевода</string>
     <string name="TranslationTarget">Целевой язык</string>
     <string name="TranslationTargetApp">Язык приложения</string>
-    <string name="ShowTranslateChatButtonLocked">Выберите другой сервис перевода или оформите **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">Выберите другой сервис перевода или оформите **RoqiGram Premium**.</string>
 
     <!-- Форматирование и поведение -->
     <string name="DisableNumberRounding">Отключить округление чисел</string>
@@ -422,7 +422,7 @@
     <string name="HidePhoneNumber">Скрыть номер телефона</string>
     <string name="DefaultProfileTab">Вкладка по умолчанию</string>
     <string name="ShowIdAndDc">Показывать ID и DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API показывает ID как есть, а Bot API добавляет минус для групп и -100 для супергрупп и каналов.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API показывает ID как есть, а Bot API добавляет минус для групп и -100 для супергрупп и каналов.</string>
 
     <!-- Архив -->
     <string name="HideArchiveFolder">Скрыть архив из списка чатов</string>
@@ -520,7 +520,7 @@
     <string name="InlineDocPercentInfo">Скидки, наценки, тысячи и миллионы</string>
     <string name="InlineDocPercentText">Процент после + или − считается от числа слева.</string>
     <string name="InlineDocShorthandsText">«к» — тысяча, «кк» — миллион. «тыс» и «млн» тоже работают.</string>
-    <string name="InlineDocCurrenciesInfo">Деньги, криптовалюты и звёзды Telegram</string>
+    <string name="InlineDocCurrenciesInfo">Деньги, криптовалюты и звёзды RoqiGram</string>
     <string name="InlineDocCurrencyText">Без «в» сумма переводится в валюту по умолчанию.</string>
     <string name="InlineDocUnitsInfo">Длина, вес, температура, скорость, время</string>
     <string name="InlineDocUnitsText">Без «в» чужие единицы переводятся в вашу систему мер, а свои — в более удобные.</string>
@@ -550,7 +550,7 @@
     <!-- Фото -->
     <string name="AlwaysSendInHD">Всегда отправлять в HD</string>
     <string name="HideCameraTile">Скрыть плитку камеры</string>
-    <string name="HideCameraTileInfo">Плитка камеры будет заменена плавающей кнопкой. Нажатие на неё запускает камеру Telegram, удержание — системную камеру.</string>
+    <string name="HideCameraTileInfo">Плитка камеры будет заменена плавающей кнопкой. Нажатие на неё запускает камеру RoqiGram, удержание — системную камеру.</string>
 
     <!-- Vosk -->
     <string name="RecognitionLanguage">Язык распознавания</string>
@@ -614,7 +614,7 @@
     <string name="PluginsEmptyInfo">Выберите плагины в каталоге или найдите больше в @exteraPlugins.</string>
     <string name="PluginCatalogOpen">Открыть каталог</string>
     <string name="PluginCatalog">Каталог плагинов</string>
-    <string name="PluginCatalogInfo">Плагины из Telegram-каналов и Git-репозиториев — смотрите и устанавливайте в одно касание.</string>
+    <string name="PluginCatalogInfo">Плагины из RoqiGram-каналов и Git-репозиториев — смотрите и устанавливайте в одно касание.</string>
     <string name="PluginCatalogVerified">Проверенные</string>
     <string name="PluginCatalogYourRepositories">Ваши репозитории</string>
     <string name="PluginCatalogAddRepository">Добавить репозиторий</string>
@@ -915,7 +915,7 @@
     <string name="ExportFormatJson">JSON</string>
     <string name="ExportFormatBoth">HTML и JSON</string>
     <string name="ExportStart">Экспортировать</string>
-    <string name="ExportInfo">HTML удобно читать в браузере, JSON совместим с экспортом Telegram Desktop.</string>
+    <string name="ExportInfo">HTML удобно читать в браузере, JSON совместим с экспортом RoqiGram Desktop.</string>
     <string name="ExportStoragePermission">Для сохранения экспорта нужен доступ к памяти.</string>
     <string name="ExportProgressTitle">Экспорт данных</string>
     <string name="ExportStateInitializing">Подготовка</string>
@@ -936,14 +936,14 @@
     <string name="ExportFailed">Не удалось выполнить экспорт</string>
     <string name="ExportFailedPanelInfo">Нажмите, чтобы узнать подробности</string>
     <string name="ExportFailedNotification">Во время экспорта данных произошла ошибка.</string>
-    <string name="ExportErrorApi">Telegram вернул ошибку: %1$s</string>
+    <string name="ExportErrorApi">RoqiGram вернул ошибку: %1$s</string>
     <string name="ExportErrorIo">Не удалось записать файл:\n%1$s</string>
-    <string name="ExportIntro">Сохраните копию данных Telegram на устройство: сведения об аккаунте, чаты и медиа.</string>
+    <string name="ExportIntro">Сохраните копию данных RoqiGram на устройство: сведения об аккаунте, чаты и медиа.</string>
     <string name="ExportIntroChat">Сохраните копию истории и медиа этого чата на устройство.</string>
     <string name="ExportDataInfo">Секретные чаты хранятся только на ваших устройствах, экспортировать их нельзя.</string>
     <string name="ExportSizeLimitInfo">Файлы большего размера пропускаются. Вместо них в экспорте остаётся пометка.</string>
     <string name="ExportDelayTitle">Экспорт пока недоступен</string>
-    <string name="ExportDelayUntil">В целях безопасности Telegram разрешит этот экспорт %1$s. Повторите запрос с этого устройства.</string>
+    <string name="ExportDelayUntil">В целях безопасности RoqiGram разрешит этот экспорт %1$s. Повторите запрос с этого устройства.</string>
     <string name="ExportAvailableFrom">Доступно %1$s</string>
     <string name="ExportShowProgress">Показать прогресс</string>
     <string name="ExportContinueInBackground">Продолжить в фоне</string>
@@ -1093,10 +1093,10 @@
     <string name="AIOnDeviceRefresh">Обновить состояние</string>
     <string name="AIOnDevicePreviewModel">Бета-модель</string>
     <string name="AIOnDeviceFastModel">Быстрая модель</string>
-    <string name="AIReplaceTelegram">ИИ Telegram</string>
+    <string name="AIReplaceTelegram">ИИ RoqiGram</string>
     <string name="AIReplaceTelegramEditorInfo">Перевод, смена стиля и проверка черновиков</string>
     <string name="AIReplaceTelegramSummariesInfo">Краткое содержание длинных сообщений и постов</string>
-    <string name="AIReplaceTelegramInfo">Выбранные функции используют ваш сервис ИИ вместо серверов Telegram и без ограничений Premium.</string>
+    <string name="AIReplaceTelegramInfo">Выбранные функции используют ваш сервис ИИ вместо серверов RoqiGram и без ограничений Premium.</string>
     <string name="AIOnDeviceManage">Настройки AICore</string>
     <string name="AIOnDeviceManageUnavailable">Системные настройки AICore на этом устройстве недоступны.</string>
     <string name="AIChangeModel">Сменить</string>
@@ -1183,7 +1183,7 @@
     <string name="EmojiSavedHint">Эмодзи сохранён в галерею.</string>
     <string name="GifGallerySavedHint">GIF сохранена в галерею.</string>
     <string name="MutualContactInfo">Этот контакт является взаимным.</string>
-    <string name="LocalPremiumEmojiHint">У вас нет подписки **Telegram Premium**, поэтому этот эмодзи будут видеть только пользователи **RoqiGram**.</string>
+    <string name="LocalPremiumEmojiHint">У вас нет подписки **RoqiGram Premium**, поэтому этот эмодзи будут видеть только пользователи **RoqiGram**.</string>
 
     <!-- Main Tabs -->
     <string name="HideContactsTab">Скрыть вкладку «Контакты»</string>
@@ -1326,7 +1326,7 @@
     <string name="PlayerSpeedDescription">Скорость %1$s. Удерживайте для других вариантов</string>
     <string name="LyricsCredit">Текст: %1$s</string>
     <string name="LyricsOfferTitle">Найти текст песни?</string>
-    <string name="LyricsOfferText">Название и исполнитель трека уйдут в LRCLIB (lrclib.net) и lrcmux напрямую, не через Telegram. Выключить поиск можно в меню плеера.</string>
+    <string name="LyricsOfferText">Название и исполнитель трека уйдут в LRCLIB (lrclib.net) и lrcmux напрямую, не через RoqiGram. Выключить поиск можно в меню плеера.</string>
     <string name="LyricsOfferButton">Искать текст</string>
     <string name="LyricsNotFoundTitle">Текст не найден</string>
     <string name="LyricsNotFoundText">Ни в тегах файла, ни в сети текста для этого трека нет.</string>

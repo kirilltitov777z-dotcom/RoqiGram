@@ -87,7 +87,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Skryť telefónne číslo</string>
     <string name="ShowIdAndDc">Zobraziť ID a DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API zobrazuje ID tak, ako sú, zatiaľ čo Bot API pridáva znamienko mínus pre skupiny a -100 pre super skupiny a kanály.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API zobrazuje ID tak, ako sú, zatiaľ čo Bot API pridáva znamienko mínus pre skupiny a -100 pre super skupiny a kanály.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Skryť priečinok Archív</string>
     <string name="ArchiveOnPull">Otvorené archívy v roletovom menu</string>
@@ -345,7 +345,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Vždy odosielať v HD</string>
     <string name="HideCameraTile">Skryť dlaždicu okamžitého fotoaparátu</string>
-    <string name="HideCameraTileInfo">Dlaždica fotoaparátu bude nahradená plávajúcim tlačidlom. Stlačením sa spustí fotoaparát Telegramu, podržaním sa spustí systémový fotoaparát.</string>
+    <string name="HideCameraTileInfo">Dlaždica fotoaparátu bude nahradená plávajúcim tlačidlom. Stlačením sa spustí fotoaparát RoqiGramu, podržaním sa spustí systémový fotoaparát.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Čas preskoku dvojitým ťuknutím</string>
     <string name="PreferOriginalQuality">Uprednostniť pôvodnú kvalitu</string>
@@ -524,7 +524,7 @@
     <string name="EmojiSavedHint">Emotikon uložený do galérie.</string>
     <string name="GifGallerySavedHint">GIF uložený do galérie.</string>
     <string name="MutualContactInfo">Tento kontakt je vzájomný.</string>
-    <string name="LocalPremiumEmojiHint">Nemáte predplatné **Telegram Premium**, takže tento emotikon uvidia iba používatelia **RoqiGram**.</string>
+    <string name="LocalPremiumEmojiHint">Nemáte predplatné **RoqiGram Premium**, takže tento emotikon uvidia iba používatelia **RoqiGram**.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Skryť kartu Kontakty</string>
     <string name="ShowContactsTab">Zobraziť kartu Kontakty</string>

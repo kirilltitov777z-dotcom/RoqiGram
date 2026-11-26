@@ -88,7 +88,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">電話番号を隠す</string>
     <string name="ShowIdAndDc">IDとDCを表示</string>
-    <string name="ShowIdAndDcInfo">Telegram APIはIDをそのまま表示しますが、Bot APIはグループにマイナス記号、スーパーグループとチャンネルに-100を追加します。</string>
+    <string name="ShowIdAndDcInfo">RoqiGram APIはIDをそのまま表示しますが、Bot APIはグループにマイナス記号、スーパーグループとチャンネルに-100を追加します。</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">アーカイブフォルダを非表示</string>
     <string name="ArchiveOnPull">プルダウンでアーカイブを開く</string>
@@ -350,7 +350,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">常にHDで送信</string>
     <string name="HideCameraTile">インスタントカメラタイルを隠す</string>
-    <string name="HideCameraTileInfo">カメラタイルはフローティングボタンに置き換えられます。それを押すとTelegramカメラが起動し、長押しするとシステムカメラが起動します。</string>
+    <string name="HideCameraTileInfo">カメラタイルはフローティングボタンに置き換えられます。それを押すとRoqiGramカメラが起動し、長押しするとシステムカメラが起動します。</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">ダブルタップのスキップ時間</string>
     <string name="PreferOriginalQuality">元の品質を優先</string>
@@ -533,7 +533,7 @@
     <string name="EmojiSavedHint">絵文字がギャラリーに保存されました。</string>
     <string name="GifGallerySavedHint">GIFをギャラリーに保存しました。</string>
     <string name="MutualContactInfo">この連絡先は相互です。</string>
-    <string name="LocalPremiumEmojiHint">**Telegram Premium**サブスクリプションをお持ちでないため、この絵文字は**RoqiGram**ユーザーのみが表示できます。</string>
+    <string name="LocalPremiumEmojiHint">**RoqiGram Premium**サブスクリプションをお持ちでないため、この絵文字は**RoqiGram**ユーザーのみが表示できます。</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">連絡先タブを非表示</string>
     <string name="ShowContactsTab">連絡先タブを表示</string>

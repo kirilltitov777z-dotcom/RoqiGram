@@ -61,7 +61,7 @@
     <string name="TranslationProvider">Proveedor de traducción</string>
     <string name="TranslationTarget">Idioma objetivo</string>
     <string name="TranslationTargetApp">Sigue la aplicación</string>
-    <string name="ShowTranslateChatButtonLocked">Elige otro proveedor de traducción o suscríbete a **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">Elige otro proveedor de traducción o suscríbete a **RoqiGram Premium**.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">Desactivar redondeo numérico</string>
     <string name="FormatTimeWithSeconds">Formato de tiempo con segundos</string>
@@ -87,7 +87,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Ocultar número de teléfono</string>
     <string name="ShowIdAndDc">Mostrar ID y DC</string>
-    <string name="ShowIdAndDcInfo">La API de Telegram muestra los ID tal como son, mientras que la API de Bot agrega un signo menos para los grupos y -100 para supergrupos y canales.</string>
+    <string name="ShowIdAndDcInfo">La API de RoqiGram muestra los ID tal como son, mientras que la API de Bot agrega un signo menos para los grupos y -100 para supergrupos y canales.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Ocultar carpeta de archivo</string>
     <string name="ArchiveOnPull">Abrir archivados al desplegar</string>
@@ -343,7 +343,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Enviar siempre en HD</string>
     <string name="HideCameraTile">Ocultar mosaico de cámara instantánea</string>
-    <string name="HideCameraTileInfo">El mosaico de la cámara se reemplazará por un botón flotante. Al presionarlo, se inicia la cámara de Telegram; al mantenerlo presionado, se inicia la cámara del sistema.</string>
+    <string name="HideCameraTileInfo">El mosaico de la cámara se reemplazará por un botón flotante. Al presionarlo, se inicia la cámara de RoqiGram; al mantenerlo presionado, se inicia la cámara del sistema.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Duración del doble toque</string>
     <string name="PreferOriginalQuality">Prefiero la calidad original</string>
@@ -518,7 +518,7 @@
     <string name="EmojiSavedHint">Emoji guardado en la galería.</string>
     <string name="GifGallerySavedHint">GIF guardado en la galería.</string>
     <string name="MutualContactInfo">Este contacto es mutuo.</string>
-    <string name="LocalPremiumEmojiHint">No tienes una suscripción a **Telegram Premium**, por lo que solo los usuarios de **RoqiGram** podrán ver este emoji.</string>
+    <string name="LocalPremiumEmojiHint">No tienes una suscripción a **RoqiGram Premium**, por lo que solo los usuarios de **RoqiGram** podrán ver este emoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Ocultar pestaña de contactos</string>
     <string name="ShowContactsTab">Mostrar pestaña de contactos</string>

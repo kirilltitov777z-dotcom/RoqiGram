@@ -87,7 +87,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Nascondi il numero di telefono</string>
     <string name="ShowIdAndDc">Mostra ID e DC</string>
-    <string name="ShowIdAndDcInfo">L\'API Telegram mostra gli ID come sono, mentre l\'API Bot aggiunge un segno meno per gruppi e -100 per supergruppi e canali.</string>
+    <string name="ShowIdAndDcInfo">L\'API RoqiGram mostra gli ID come sono, mentre l\'API Bot aggiunge un segno meno per gruppi e -100 per supergruppi e canali.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Nascondi archivio</string>
     <string name="ArchiveOnPull">Scorri giù per l\'archivio chat</string>
@@ -122,7 +122,7 @@
     <string name="TabTitleStyleTextOnly">Solo nomi</string>
     <string name="TabCounter">Contatore notifiche</string>
     <string name="HideAllChats">Nascondi la cartella \'%1$s\'</string>
-    <string name="FoldersInfo">Le icone sono sincronizzate con il tuo account Telegram.</string>
+    <string name="FoldersInfo">Le icone sono sincronizzate con il tuo account RoqiGram.</string>
     <!-- App Navigation -->
     <string name="AppNavigation">Navigazione app</string>
     <string name="AppNavigationInfo">Impostazioni menu in alto a destra e cassetto</string>
@@ -216,7 +216,7 @@
     <string name="HideReactions">Nascondi reazioni</string>
     <string name="HideReactionsInfo">Le reazioni saranno completamente disattivate.</string>
     <string name="ReplyBackground">Sfondo</string>
-    <string name="ChatSettingsInfo">Preferenze standard di Telegram</string>
+    <string name="ChatSettingsInfo">Preferenze standard di RoqiGram</string>
     <!-- AI -->
     <string name="AIChatInfo">Impostazione di servizi, ruoli e cronologia</string>
     <string name="AIChatInfo2">Genera testo dai messaggi o prima dell\'invio.</string>
@@ -341,7 +341,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Invia massima risoluzione</string>
     <string name="HideCameraTile">Nascondi fotocamera istantanea</string>
-    <string name="HideCameraTileInfo">Il riquadro della fotocamera sarà sostituito da un pulsante fluttuante (\'FAB\'): toccandolo si avvia la telecamera di Telegram, tenendo premuto si avvia la fotocamera di sistema.</string>
+    <string name="HideCameraTileInfo">Il riquadro della fotocamera sarà sostituito da un pulsante fluttuante (\'FAB\'): toccandolo si avvia la telecamera di RoqiGram, tenendo premuto si avvia la fotocamera di sistema.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Avanti/indietro con doppio tap</string>
     <string name="PreferOriginalQuality">Qualità originale (se possibile)</string>
@@ -519,7 +519,7 @@
     <string name="EmojiSavedHint">Emoji salvata come immagine.</string>
     <string name="GifGallerySavedHint">GIF salvata nella galleria.</string>
     <string name="MutualContactInfo">Contatto reciproco.</string>
-    <string name="LocalPremiumEmojiHint">Non hai un abbonamento **Telegram Premium**, quindi solo gli utenti di **RoqiGram** vedranno questa emoji.</string>
+    <string name="LocalPremiumEmojiHint">Non hai un abbonamento **RoqiGram Premium**, quindi solo gli utenti di **RoqiGram** vedranno questa emoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Nascondi la scheda Contatti</string>
     <string name="ShowContactsTab">Mostra la scheda Contatti</string>

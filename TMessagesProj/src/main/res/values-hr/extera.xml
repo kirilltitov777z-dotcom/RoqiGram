@@ -86,7 +86,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Sakrij broj telefona</string>
     <string name="ShowIdAndDc">Prikaži ID i DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API prikazuje ID-eve kakvi jesu, dok Bot API dodaje znak minus za grupe i -100 za supergrupe i kanale.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API prikazuje ID-eve kakvi jesu, dok Bot API dodaje znak minus za grupe i -100 za supergrupe i kanale.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Sakrij mapu arhive</string>
     <string name="ArchiveOnPull">Otvori arhivu povlačenjem prema dolje</string>
@@ -347,7 +347,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Uvijek šalji u HD</string>
     <string name="HideCameraTile">Sakrij pločicu za trenutnu kameru</string>
-    <string name="HideCameraTileInfo">Pločica kamere bit će zamijenjena plutajućim gumbom. Pritiskom se pokreće Telegram kamera; držanjem se pokreće sustavska kamera.</string>
+    <string name="HideCameraTileInfo">Pločica kamere bit će zamijenjena plutajućim gumbom. Pritiskom se pokreće RoqiGram kamera; držanjem se pokreće sustavska kamera.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Vrijeme preskoka dvostrukim dodirom</string>
     <string name="PreferOriginalQuality">Preferiraj izvornu kvalitetu</string>
@@ -524,7 +524,7 @@
     <string name="EmojiSavedHint">Emoji spremljen u galeriju.</string>
     <string name="GifGallerySavedHint">GIF spremljen u galeriju.</string>
     <string name="MutualContactInfo">Ovaj kontakt je uzajaman.</string>
-    <string name="LocalPremiumEmojiHint">Nemate **Telegram Premium** pretplatu, pa će samo **RoqiGram** korisnici moći vidjeti ovaj emoji.</string>
+    <string name="LocalPremiumEmojiHint">Nemate **RoqiGram Premium** pretplatu, pa će samo **RoqiGram** korisnici moći vidjeti ovaj emoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Sakrij karticu Kontakti</string>
     <string name="ShowContactsTab">Prikaži karticu Kontakti</string>

@@ -63,7 +63,7 @@
     <string name="TranslationProvider">ارائه‌دهنده ترجمه</string>
     <string name="TranslationTarget">زبان مقصد</string>
     <string name="TranslationTargetApp">پیروی از برنامه</string>
-    <string name="ShowTranslateChatButtonLocked">یک ارائه‌دهندهٔ ترجمهٔ دیگر انتخاب کنید یا مشترک **Telegram Premium** شوید.</string>
+    <string name="ShowTranslateChatButtonLocked">یک ارائه‌دهندهٔ ترجمهٔ دیگر انتخاب کنید یا مشترک **RoqiGram Premium** شوید.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">غیرفعال کردن گرد کردن اعداد</string>
     <string name="FormatTimeWithSeconds">فرمت زمان با ثانیه</string>
@@ -569,7 +569,7 @@
     <string name="EmojiSavedHint">ایموجی در گالری ذخیره شد.</string>
     <string name="GifGallerySavedHint">GIF در گالری ذخیره شد.</string>
     <string name="MutualContactInfo">این تماس متقابل است.</string>
-    <string name="LocalPremiumEmojiHint">شما اشتراک **Telegram Premium** ندارید، بنابراین فقط کاربران **RoqiGram** قادر به دیدن این ایموجی خواهند بود.</string>
+    <string name="LocalPremiumEmojiHint">شما اشتراک **RoqiGram Premium** ندارید، بنابراین فقط کاربران **RoqiGram** قادر به دیدن این ایموجی خواهند بود.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">پنهان‌سازی برگه مخاطبین</string>
     <string name="ShowContactsTab">نمایش برگه مخاطبین</string>

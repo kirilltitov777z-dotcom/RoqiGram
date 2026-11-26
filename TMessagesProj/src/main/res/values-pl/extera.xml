@@ -70,7 +70,7 @@
     <string name="TranslationProvider">Dostawca tłumaczeń</string>
     <string name="TranslationTarget">Język docelowy</string>
     <string name="TranslationTargetApp">Domyślny</string>
-    <string name="ShowTranslateChatButtonLocked">Wybierz innego dostawcę tłumaczeń lub zasubskrybuj **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">Wybierz innego dostawcę tłumaczeń lub zasubskrybuj **RoqiGram Premium**.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">Wyłącz zaokrąglanie liczb</string>
     <string name="FormatTimeWithSeconds">Formatuj czas z sekundami</string>
@@ -99,7 +99,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Ukryj numer telefonu</string>
     <string name="ShowIdAndDc">Pokaż ID i DC</string>
-    <string name="ShowIdAndDcInfo">API Telegrama wyświetla ID w oryginalnej formie, natomiast Bot API dodaje minus przy grupach i -100 przy supergrupach oraz kanałach.</string>
+    <string name="ShowIdAndDcInfo">API RoqiGrama wyświetla ID w oryginalnej formie, natomiast Bot API dodaje minus przy grupach i -100 przy supergrupach oraz kanałach.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Ukryj folder Archiwum</string>
     <string name="ArchiveOnPull">Otwórz Archiwum przy pociągnięciu</string>
@@ -339,7 +339,7 @@
     <string name="AIOnDeviceFastModel">Szybki model</string>
     <string name="AIReplaceTelegramEditorInfo">Tłumacz, zmieniaj styl i sprawdzaj wersje robocze</string>
     <string name="AIReplaceTelegramSummariesInfo">Podsumowuj długie wiadomości i posty</string>
-    <string name="AIReplaceTelegramInfo">Wybrane funkcje korzystają z Twojej usługi AI zamiast serwerów Telegrama, bez limitów Premium.</string>
+    <string name="AIReplaceTelegramInfo">Wybrane funkcje korzystają z Twojej usługi AI zamiast serwerów RoqiGrama, bez limitów Premium.</string>
     <string name="AIOnDeviceManage">Ustawienia AICore</string>
     <string name="AIOnDeviceManageUnavailable">Ustawienia systemowe AICore nie są dostępne na tym urządzeniu.</string>
     <string name="AIChangeModel">Zmień</string>
@@ -430,7 +430,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Zawsze wysyłaj w jakości HD</string>
     <string name="HideCameraTile">Ukryj kafelek szybkiego aparatu</string>
-    <string name="HideCameraTileInfo">Kafelek aparatu zostanie zastąpiony pływającym przyciskiem. Naciśnij, aby uruchomić aparat Telegram; przytrzymaj, aby uruchomić aparat systemowy.</string>
+    <string name="HideCameraTileInfo">Kafelek aparatu zostanie zastąpiony pływającym przyciskiem. Naciśnij, aby uruchomić aparat RoqiGram; przytrzymaj, aby uruchomić aparat systemowy.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Czas pomijania podwójnym stuknięciem</string>
     <string name="PreferOriginalQuality">Preferuj oryginalną jakość</string>
@@ -639,7 +639,7 @@
     <string name="EmojiSavedHint">Emoji zostało zapisane w galerii.</string>
     <string name="GifGallerySavedHint">GIF został zapisany w galerii.</string>
     <string name="MutualContactInfo">Ten kontakt jest wzajemny.</string>
-    <string name="LocalPremiumEmojiHint">Nie masz subskrypcji **Telegram Premium**, więc tylko użytkownicy **RoqiGram** będą mogli zobaczyć tę emotikonę.</string>
+    <string name="LocalPremiumEmojiHint">Nie masz subskrypcji **RoqiGram Premium**, więc tylko użytkownicy **RoqiGram** będą mogli zobaczyć tę emotikonę.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Ukryj zakładkę Kontakty</string>
     <string name="ShowContactsTab">Pokaż zakładkę Kontakty</string>

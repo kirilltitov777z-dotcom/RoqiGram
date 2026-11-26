@@ -248,7 +248,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Схаваць нумар тэлефона</string>
     <string name="ShowIdAndDc">Паказаць ID ды DC</string>
-    <string name="ShowIdAndDcInfo">API Telegram паказвае ідэнтыфікатары такімі, якія яны ёсць, а API бота дадае знак мінус для груп і -100 для супергруп і каналаў.</string>
+    <string name="ShowIdAndDcInfo">API RoqiGram паказвае ідэнтыфікатары такімі, якія яны ёсць, а API бота дадае знак мінус для груп і -100 для супергруп і каналаў.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Схаваць архіў са спіса чатаў</string>
     <string name="ArchiveOnPull">Адчыняць архіў пры выцягванні</string>
@@ -495,7 +495,7 @@
     <string name="AIOnDeviceFastModel">Хуткая мадэль</string>
     <string name="AIReplaceTelegramEditorInfo">Пераклад, змена стылю і карэктура чарнавікоў</string>
     <string name="AIReplaceTelegramSummariesInfo">Кароткі змест доўгіх паведамленняў і публікацый</string>
-    <string name="AIReplaceTelegramInfo">Выбраныя функцыі будуць выкарыстоўваць ваш сэрвіс ШІ замест сервераў Telegram, без абмежаванняў Premium.</string>
+    <string name="AIReplaceTelegramInfo">Выбраныя функцыі будуць выкарыстоўваць ваш сэрвіс ШІ замест сервераў RoqiGram, без абмежаванняў Premium.</string>
     <string name="AIOnDeviceManage">Налады AICore</string>
     <string name="AIOnDeviceManageUnavailable">Сістэмныя налады AICore недаступныя на гэтай прыладзе.</string>
     <string name="AIChangeModel">Змяніць</string>
@@ -568,7 +568,7 @@
     <string name="InlineDocPercentInfo">Зніжкі, нацэнкі, тысячы і мільёны</string>
     <string name="InlineDocPercentText">Працэнт пасля + або − бярэцца ад ліку злева.</string>
     <string name="InlineDocShorthandsText">«k» азначае тысячу, а «kk» — мільён. Словы «thousand» і «million» таксама працуюць.</string>
-    <string name="InlineDocCurrenciesInfo">Валюты, крыптавалюты і Telegram Stars</string>
+    <string name="InlineDocCurrenciesInfo">Валюты, крыптавалюты і RoqiGram Stars</string>
     <string name="InlineDocCurrencyText">Без слоў «to» або «in» сума аўтаматычна пераводзіцца ў асноўную валюту.</string>
     <string name="InlineDocUnitsInfo">Даўжыня, вага, тэмпература, хуткасць, час</string>
     <string name="InlineDocUnitsText">Калі не выкарыстоўваюцца словы «to» або «in», іншыя адзінкі вымярэння пераўтвараюцца ў адзінкі вашай сістэмы, а вашы ўласныя — у больш зручную велічыню.</string>
@@ -633,7 +633,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Заўсёды адпраўляць у HD-якасці</string>
     <string name="HideCameraTile">Схаваць плітку імгненнай камеры</string>
-    <string name="HideCameraTileInfo">Плітка камеры будзе заменена плаваючай кнопкай. Націсканне на яе запускае камеру Telegram; утрымліваючы яго, запускае сістэмную камеру.</string>
+    <string name="HideCameraTileInfo">Плітка камеры будзе заменена плаваючай кнопкай. Націсканне на яе запускае камеру RoqiGram; утрымліваючы яго, запускае сістэмную камеру.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Падвойны націск для пошуку</string>
     <string name="PreferOriginalQuality">Аддаваць перавагу арыгінальнай якасці</string>
@@ -731,12 +731,12 @@
     <string name="PluginsEmptyInfo">Выберыце плагіны ў каталогу або знайдзіце больш у @exteraPlugins.</string>
     <string name="PluginCatalogOpen">Адкрыць каталог</string>
     <string name="PluginCatalog">Каталог плагінаў</string>
-    <string name="PluginCatalogInfo">Праглядайце плагіны з Telegram-каналаў і Git-рэпазіторыяў і ўсталёўвайце іх у адзін дотык.</string>
+    <string name="PluginCatalogInfo">Праглядайце плагіны з RoqiGram-каналаў і Git-рэпазіторыяў і ўсталёўвайце іх у адзін дотык.</string>
     <string name="PluginCatalogVerified">Правераныя</string>
     <string name="PluginCatalogYourRepositories">Вашы рэпазіторыі</string>
     <string name="PluginCatalogAddRepository">Дадаць рэпазіторый</string>
     <string name="PluginCatalogRemoveRepository">Выдаліць рэпазіторый</string>
-    <string name="PluginCatalogRepositoriesInfo">Рэпазіторыямі могуць быць Telegram-каналы і Git-рэпазіторыі, дзе публікуюцца плагіны. Плагіны з неправераных крыніц можна ўсталяваць толькі пры ўключанай опцыі **«Невядомыя крыніцы»**.</string>
+    <string name="PluginCatalogRepositoriesInfo">Рэпазіторыямі могуць быць RoqiGram-каналы і Git-рэпазіторыі, дзе публікуюцца плагіны. Плагіны з неправераных крыніц можна ўсталяваць толькі пры ўключанай опцыі **«Невядомыя крыніцы»**.</string>
     <string name="PluginCatalogEnterLink">Увядзіце спасылку</string>
     <string name="PluginCatalogLinkHint">t.me/channel або @channel</string>
     <string name="PluginCatalogChannelNotFound">Канал не знойдзены.</string>
@@ -1005,7 +1005,7 @@
     <string name="EmojiSavedHint">Эмодзі захавана ў галерэю.</string>
     <string name="GifGallerySavedHint">GIF дададзены ў галерэю.</string>
     <string name="MutualContactInfo">Гэты кантакт узаемны.</string>
-    <string name="LocalPremiumEmojiHint">У вас няма падпіскі **Telegram Premium**, таму гэты эмодзі змогуць убачыць толькі карыстальнікі **RoqiGram**.</string>
+    <string name="LocalPremiumEmojiHint">У вас няма падпіскі **RoqiGram Premium**, таму гэты эмодзі змогуць убачыць толькі карыстальнікі **RoqiGram**.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Схаваць укладку «Кантакты»</string>
     <string name="ShowContactsTab">Паказаць укладку «Кантакты»</string>
@@ -1126,7 +1126,7 @@
     <string name="PlayerSpeedDescription">Хуткасць прайгравання %1$s. Утрымлівайце для дадатковых параметраў</string>
     <string name="LyricsCredit">Тэкст песні: %1$s</string>
     <string name="LyricsOfferTitle">Знайсці тэкст песні?</string>
-    <string name="LyricsOfferText">Назва трэка і імя выканаўцы будуць адпраўлены непасрэдна ў сэрвісы LRCLIB (lrclib.net) і lrcmux, у абыход Telegram. Гэтую функцыю можна выключыць у меню плэера.</string>
+    <string name="LyricsOfferText">Назва трэка і імя выканаўцы будуць адпраўлены непасрэдна ў сэрвісы LRCLIB (lrclib.net) і lrcmux, у абыход RoqiGram. Гэтую функцыю можна выключыць у меню плэера.</string>
     <string name="LyricsOfferButton">Шукаць тэкст</string>
     <string name="LyricsNotFoundTitle">Тэкст не знойдзены</string>
     <string name="LyricsNotFoundText">Для гэтага трэка няма тэксту ні ў тэгах файла, ні ў Інтэрнэце.</string>

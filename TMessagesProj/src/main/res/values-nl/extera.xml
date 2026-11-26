@@ -82,7 +82,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Telefoonnummer verbergen</string>
     <string name="ShowIdAndDc">ID en DC tonen</string>
-    <string name="ShowIdAndDcInfo">Telegram API toont ID\'s zoals ze zijn, terwijl de Bot API een minteken toevoegt voor groepen en -100 voor supergroepen en kanalen.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API toont ID\'s zoals ze zijn, terwijl de Bot API een minteken toevoegt voor groepen en -100 voor supergroepen en kanalen.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Archiefmap verbergen</string>
     <string name="ArchiveOnPull">Archief openen bij omlaag trekken</string>
@@ -336,7 +336,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Altijd in HD verzenden</string>
     <string name="HideCameraTile">Snelcamerategel verbergen</string>
-    <string name="HideCameraTileInfo">De camerategel wordt vervangen door een zwevende knop. Door erop te drukken wordt de Telegram-camera geopend; door lang te drukken wordt de systeemcamera geopend.</string>
+    <string name="HideCameraTileInfo">De camerategel wordt vervangen door een zwevende knop. Door erop te drukken wordt de RoqiGram-camera geopend; door lang te drukken wordt de systeemcamera geopend.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Overslaan met dubbeltik</string>
     <string name="PreferOriginalQuality">Originele kwaliteit prefereren</string>
@@ -510,7 +510,7 @@
     <string name="EmojiSavedHint">Emoji opgeslagen in galerij.</string>
     <string name="GifGallerySavedHint">GIF opgeslagen in galerij.</string>
     <string name="MutualContactInfo">Dit contact is wederzijds.</string>
-    <string name="LocalPremiumEmojiHint">Je hebt geen **Telegram Premium**-abonnement, dus alleen **RoqiGram**-gebruikers kunnen deze emoji zien.</string>
+    <string name="LocalPremiumEmojiHint">Je hebt geen **RoqiGram Premium**-abonnement, dus alleen **RoqiGram**-gebruikers kunnen deze emoji zien.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Tabblad Contacten verbergen</string>
     <string name="ShowContactsTab">Tabblad Contacten tonen</string>

@@ -88,7 +88,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Телефон нөмірін жасыру</string>
     <string name="ShowIdAndDc">ID және DC көрсету</string>
-    <string name="ShowIdAndDcInfo">Telegram API идентификаторларды өз қалпында көрсетеді, ал Bot API топтар үшін минус таңбасын, супертоптар мен арналар үшін -100 қосады.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API идентификаторларды өз қалпында көрсетеді, ал Bot API топтар үшін минус таңбасын, супертоптар мен арналар үшін -100 қосады.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Мұрағат қалтасын жасыру</string>
     <string name="ArchiveOnPull">Төмен тартқанда мұрағатты ашу</string>
@@ -353,7 +353,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Әрқашан HD сапада жіберу</string>
     <string name="HideCameraTile">Лезде камера тайлын жасыру</string>
-    <string name="HideCameraTileInfo">Камера тайлы қалқымалы түймеге ауыстырылады. Оны басқан Telegram камерасын, ұзақ басқан жүйе камерасын іске қосады.</string>
+    <string name="HideCameraTileInfo">Камера тайлы қалқымалы түймеге ауыстырылады. Оны басқан RoqiGram камерасын, ұзақ басқан жүйе камерасын іске қосады.</string>
     <string name="ShortStandardQuality">SD сапасы</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Екі рет түртумен өткізу уақыты</string>
@@ -534,7 +534,7 @@
     <string name="EmojiSavedHint">Эмодзи галереяға сақталды.</string>
     <string name="GifGallerySavedHint">GIF галереяға сақталды.</string>
     <string name="MutualContactInfo">Бұл контакт өзара.</string>
-    <string name="LocalPremiumEmojiHint">Сізде **Telegram Premium** жазылымы жоқ, сондықтан бұл эмодзиді тек **RoqiGram** пайдаланушылары көре алады.</string>
+    <string name="LocalPremiumEmojiHint">Сізде **RoqiGram Premium** жазылымы жоқ, сондықтан бұл эмодзиді тек **RoqiGram** пайдаланушылары көре алады.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Контакттар қойындысын жасыру</string>
     <string name="ShowContactsTab">Контакттар қойындысын көрсету</string>

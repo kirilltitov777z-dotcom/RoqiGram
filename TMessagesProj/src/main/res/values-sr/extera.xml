@@ -86,7 +86,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Сакриј број телефона</string>
     <string name="ShowIdAndDc">Prikaži ID i DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API prikazuje ID-eve kakvi jesu, dok Bot API dodaje znak minus za grupe i -100 za supergrupe i kanale.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API prikazuje ID-eve kakvi jesu, dok Bot API dodaje znak minus za grupe i -100 za supergrupe i kanale.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Sakrij fasciklu Arhiva</string>
     <string name="ArchiveOnPull">Otvori Arhivu povlačenjem nadole</string>
@@ -345,7 +345,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Uvek šalji u HD</string>
     <string name="HideCameraTile">Sakrij pločicu za trenutnu kameru</string>
-    <string name="HideCameraTileInfo">Pločica kamere biće zamenjena plutajućim dugmetom. Pritisak pokreće Telegram kameru; držanje pokreće sistemsku kameru.</string>
+    <string name="HideCameraTileInfo">Pločica kamere biće zamenjena plutajućim dugmetom. Pritisak pokreće RoqiGram kameru; držanje pokreće sistemsku kameru.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Vreme preskakanja dvostrukim dodirom</string>
     <string name="PreferOriginalQuality">Preferiraj originalni kvalitet</string>
@@ -522,7 +522,7 @@
     <string name="EmojiSavedHint">Emoji sačuvan u galeriji.</string>
     <string name="GifGallerySavedHint">GIF sačuvan u galeriji.</string>
     <string name="MutualContactInfo">Ovaj kontakt je uzajaman.</string>
-    <string name="LocalPremiumEmojiHint">Nemate **Telegram Premium** pretplatu, pa će samo **RoqiGram** korisnici moći da vide ovaj emoji.</string>
+    <string name="LocalPremiumEmojiHint">Nemate **RoqiGram Premium** pretplatu, pa će samo **RoqiGram** korisnici moći da vide ovaj emoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Sakrij karticu Kontakti</string>
     <string name="ShowContactsTab">Prikaži karticu Kontakti</string>

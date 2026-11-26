@@ -85,7 +85,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">전화번호 숨기기</string>
     <string name="ShowIdAndDc">ID 및 DC 표시</string>
-    <string name="ShowIdAndDcInfo">Telegram API는 ID를 그대로 표시하고, Bot API는 그룹에 마이너스 기호를, 슈퍼그룹 및 채널에는 -100을 추가합니다.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API는 ID를 그대로 표시하고, Bot API는 그룹에 마이너스 기호를, 슈퍼그룹 및 채널에는 -100을 추가합니다.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">보관함 폴더 숨기기</string>
     <string name="ArchiveOnPull">당겨서 보관함 열기</string>
@@ -349,7 +349,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">항상 HD로 전송</string>
     <string name="HideCameraTile">즉시 카메라 타일 숨기기</string>
-    <string name="HideCameraTileInfo">카메라 타일이 플로팅 버튼으로 대체됩니다. 누르면 Telegram 카메라가 실행되고, 길게 누르면 시스템 카메라가 실행됩니다.</string>
+    <string name="HideCameraTileInfo">카메라 타일이 플로팅 버튼으로 대체됩니다. 누르면 RoqiGram 카메라가 실행되고, 길게 누르면 시스템 카메라가 실행됩니다.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">더블 탭 건너뛰기 시간</string>
     <string name="PreferOriginalQuality">원본 품질 선호</string>
@@ -529,7 +529,7 @@
     <string name="EmojiSavedHint">이모지가 갤러리에 저장되었습니다.</string>
     <string name="GifGallerySavedHint">GIF가 갤러리에 저장되었습니다.</string>
     <string name="MutualContactInfo">이 연락처는 상호 연락처입니다.</string>
-    <string name="LocalPremiumEmojiHint">**Telegram Premium** 구독이 없으므로 **RoqiGram** 사용자만 이 이모지를 볼 수 있습니다.</string>
+    <string name="LocalPremiumEmojiHint">**RoqiGram Premium** 구독이 없으므로 **RoqiGram** 사용자만 이 이모지를 볼 수 있습니다.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">연락처 탭 숨기기</string>
     <string name="ShowContactsTab">연락처 탭 표시</string>

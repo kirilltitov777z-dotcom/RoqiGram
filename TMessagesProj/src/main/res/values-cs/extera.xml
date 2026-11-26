@@ -87,7 +87,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Skrýt telefonní číslo</string>
     <string name="ShowIdAndDc">Zobrazit ID a DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API zobrazuje ID tak, jak jsou, zatímco Bot API přidává znaménko mínus pro skupiny a -100 pro supergroupy a kanály.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API zobrazuje ID tak, jak jsou, zatímco Bot API přidává znaménko mínus pro skupiny a -100 pro supergroupy a kanály.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Skrýt složku Archivu</string>
     <string name="ArchiveOnPull">Otevřít archiv při stažení dolů</string>
@@ -346,7 +346,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Vždy odesílat v HD</string>
     <string name="HideCameraTile">Skrýt dlaždici okamžité kamery</string>
-    <string name="HideCameraTileInfo">Dlaždice kamery bude nahrazena plovoucím tlačítkem. Klepnutím se spustí kamera Telegramu, podržením se spustí systémová kamera.</string>
+    <string name="HideCameraTileInfo">Dlaždice kamery bude nahrazena plovoucím tlačítkem. Klepnutím se spustí kamera RoqiGramu, podržením se spustí systémová kamera.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Doba přeskočení dvojitým klepnutím</string>
     <string name="PreferOriginalQuality">Preferovat původní kvalitu</string>
@@ -523,7 +523,7 @@
     <string name="EmojiSavedHint">Emoji uloženo do galerie.</string>
     <string name="GifGallerySavedHint">GIF uložen do galerie.</string>
     <string name="MutualContactInfo">Tento kontakt je vzájemný.</string>
-    <string name="LocalPremiumEmojiHint">Nemáte předplatné **Telegram Premium**, takže toto emoji uvidí pouze uživatelé **RoqiGram**.</string>
+    <string name="LocalPremiumEmojiHint">Nemáte předplatné **RoqiGram Premium**, takže toto emoji uvidí pouze uživatelé **RoqiGram**.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Skrýt kartu Kontakty</string>
     <string name="ShowContactsTab">Zobrazit kartu Kontakty</string>

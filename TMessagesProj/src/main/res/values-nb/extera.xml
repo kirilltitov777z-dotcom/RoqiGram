@@ -59,7 +59,7 @@
     <string name="TranslationProvider">Oversettelsesleverandør</string>
     <string name="TranslationTarget">Målspråk</string>
     <string name="TranslationTargetApp">Følg appen</string>
-    <string name="ShowTranslateChatButtonLocked">Velg en annen oversettelsesleverandør eller abonnér på **Telegram Premium**.</string>
+    <string name="ShowTranslateChatButtonLocked">Velg en annen oversettelsesleverandør eller abonnér på **RoqiGram Premium**.</string>
     <!-- Formatting & Behavior -->
     <string name="DisableNumberRounding">Deaktiver tallavrunding</string>
     <string name="FormatTimeWithSeconds">Formater tid med sekunder</string>
@@ -85,7 +85,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Skjul telefonnummer</string>
     <string name="ShowIdAndDc">Vis ID og DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API viser ID-er som de er, mens Bot API legger til et minustegn for grupper og -100 for supergrupper og kanaler.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API viser ID-er som de er, mens Bot API legger til et minustegn for grupper og -100 for supergrupper og kanaler.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Skjul arkivmappen</string>
     <string name="ArchiveOnPull">Åpne arkivet på rullegardinmenyen</string>
@@ -345,7 +345,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Send alltid i HD</string>
     <string name="HideCameraTile">Skjul flis for øyeblikkelig kamera</string>
-    <string name="HideCameraTileInfo">Kameraflisen vil bli erstattet av en flytende knapp. Hvis du trykker på den, starter Telegram-kameraet; hvis du holder den inne, starter systemkameraet.</string>
+    <string name="HideCameraTileInfo">Kameraflisen vil bli erstattet av en flytende knapp. Hvis du trykker på den, starter RoqiGram-kameraet; hvis du holder den inne, starter systemkameraet.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Dobbelttrykk Hopp over tid</string>
     <string name="PreferOriginalQuality">Foretrekker original kvalitet</string>
@@ -521,7 +521,7 @@
     <string name="EmojiSavedHint">Emojien er lagret i galleriet.</string>
     <string name="GifGallerySavedHint">GIF lagret i galleriet.</string>
     <string name="MutualContactInfo">Denne kontakten er gjensidig.</string>
-    <string name="LocalPremiumEmojiHint">Du har ikke et **Telegram Premium**-abonnement, så bare **RoqiGram**-brukere vil kunne se denne emojien.</string>
+    <string name="LocalPremiumEmojiHint">Du har ikke et **RoqiGram Premium**-abonnement, så bare **RoqiGram**-brukere vil kunne se denne emojien.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Skjul Kontakter-fanen</string>
     <string name="ShowContactsTab">Vis Kontakter-fanen</string>

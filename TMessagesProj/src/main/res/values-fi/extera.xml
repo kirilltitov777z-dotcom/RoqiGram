@@ -87,7 +87,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Piilota Puhelinnumero</string>
     <string name="ShowIdAndDc">Näytä ID ja DC</string>
-    <string name="ShowIdAndDcInfo">Telegram API näyttää tunnukset sellaisina kuin ne ovat, kun taas Bot API lisää miinusmerkin ryhmille ja -100 superryhmille ja kanaville.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API näyttää tunnukset sellaisina kuin ne ovat, kun taas Bot API lisää miinusmerkin ryhmille ja -100 superryhmille ja kanaville.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Piilota Arkistokansio</string>
     <string name="ArchiveOnPull">Avaa arkisto alasvedossa</string>
@@ -350,7 +350,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Lähetä aina HD-laadulla</string>
     <string name="HideCameraTile">Piilota pika-kamera-ruutu</string>
-    <string name="HideCameraTileInfo">Kameraruutu korvataan kelluvalla painikkeella. Painamalla se avaa Telegram-kameran; pitämällä painettuna avaa järjestelmäkameran.</string>
+    <string name="HideCameraTileInfo">Kameraruutu korvataan kelluvalla painikkeella. Painamalla se avaa RoqiGram-kameran; pitämällä painettuna avaa järjestelmäkameran.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Kaksoisnapautuksen ohitusaika</string>
     <string name="PreferOriginalQuality">Suosi alkuperäistä laatua</string>
@@ -529,7 +529,7 @@
     <string name="EmojiSavedHint">Emoji tallennettu galleriaan.</string>
     <string name="GifGallerySavedHint">GIF tallennettu galleriaan.</string>
     <string name="MutualContactInfo">Tämä yhteystieto on molemminpuolinen.</string>
-    <string name="LocalPremiumEmojiHint">Sinulla ei ole **Telegram Premium** -tilausta, joten vain **RoqiGram**-käyttäjät näkevät tämän emojin.</string>
+    <string name="LocalPremiumEmojiHint">Sinulla ei ole **RoqiGram Premium** -tilausta, joten vain **RoqiGram**-käyttäjät näkevät tämän emojin.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Piilota yhteystietovälilehti</string>
     <string name="ShowContactsTab">Näytä yhteystietovälilehti</string>

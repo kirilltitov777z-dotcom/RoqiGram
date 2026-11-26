@@ -32,7 +32,7 @@
     <string name="TabTitleStyleTextOnly">Yalnız adlar</string>
     <string name="TabCounter">Bildiriş sayğacı</string>
     <string name="HideAllChats">\"%1$s\" nişanını gizlədin</string>
-    <string name="FoldersInfo">Nişanlar Telegram ilə sinxronlaşdırılır.</string>
+    <string name="FoldersInfo">Nişanlar RoqiGram ilə sinxronlaşdırılır.</string>
     <string name="IconPack">İkonlar</string>
     <string name="BlurOptions">Bulanıqlıq Seçimləri</string>
     <string name="ForceSnow">Məcburi qar yağışı</string>
@@ -53,7 +53,7 @@
     <string name="SpeedBoostInfo">Ultra artırma yavaş internet bağlantısında faylların endirilməsi və videoların yayımlanması ilə bağlı problemlər yarada bilər.</string>
     <string name="HidePhoneNumber">Telefon nömrəsini gizlət</string>
     <string name="ShowIdAndDc">ID və DC-ni göstər</string>
-    <string name="ShowIdAndDcInfo">Telegram API identifikatorları olduğu kimi göstərir, Bot API isə qruplar üçün mənfi işarə, superqruplar, yayım qrupları və kanallar üçün -100 işarəsi əlavə edir.</string>
+    <string name="ShowIdAndDcInfo">RoqiGram API identifikatorları olduğu kimi göstərir, Bot API isə qruplar üçün mənfi işarə, superqruplar, yayım qrupları və kanallar üçün -100 işarəsi əlavə edir.</string>
     <string name="ArchiveOnPull">Arxivi aşağı açılan menyuda açın</string>
     <string name="DisableUnarchiveSwipe">\"Arxivdən çıxarmaq\" jestini söndür</string>
     <string name="DisableUnarchiveSwipeInfo">Sola sürüşdürmək söhbətləri arxivdən silməyəcək.</string>
@@ -86,7 +86,7 @@
     <string name="HideSendAsPeer">\"Kimi göndər...\" düyməsini gizlət</string>
     <string name="HideSendAsPeerInfo">Siz hələ də Emojilər/Stikerlər/GIF-lər düyməsini uzun basmaqla \"Kimi göndər...\" menyusuna daxil ola bilərsiniz.</string>
     <string name="HideCameraTile">Ani Kamera plitəsini gizlət</string>
-    <string name="HideCameraTileInfo">Kamera plitəsi üzən düymə ilə əvəz olunacaq. Düyməni basmaq Telegram kamerasını işə salacaq, onu basıb saxlamaq sistem kamerasını işə salacaq.</string>
+    <string name="HideCameraTileInfo">Kamera plitəsi üzən düymə ilə əvəz olunacaq. Düyməni basmaq RoqiGram kamerasını işə salacaq, onu basıb saxlamaq sistem kamerasını işə salacaq.</string>
     <string name="StaticZoom">Statik yaxınlaşdırma</string>
     <string name="StaticZoomInfo">Video mesajları yazarkən, barmaqlarınızı buraxsanız, yaxınlaşdırma sıfırlanmayacaq.</string>
     <string name="VideoMessagesCamera">Video Mesajlarda Kamera</string>

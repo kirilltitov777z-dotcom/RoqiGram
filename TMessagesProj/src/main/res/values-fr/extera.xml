@@ -84,7 +84,7 @@
     <!-- Profile -->
     <string name="HidePhoneNumber">Cacher le numéro de téléphone</string>
     <string name="ShowIdAndDc">Montrer ID et DC</string>
-    <string name="ShowIdAndDcInfo">L\'API Telegram affiche les identifiants tels quels, tandis que l\'API Bot ajoute un signe moins pour les groupes et -100 pour les supergroupes et les canaux.</string>
+    <string name="ShowIdAndDcInfo">L\'API RoqiGram affiche les identifiants tels quels, tandis que l\'API Bot ajoute un signe moins pour les groupes et -100 pour les supergroupes et les canaux.</string>
     <!-- Archive -->
     <string name="HideArchiveFolder">Masquer le dossier Archives</string>
     <string name="ArchiveOnPull">Ouvrir l\'archive lors du pulldown</string>
@@ -335,7 +335,7 @@
     <!-- Photo -->
     <string name="AlwaysSendInHD">Toujours envoyer en HD</string>
     <string name="HideCameraTile">Masquer la tuile de la caméra instantanée</string>
-    <string name="HideCameraTileInfo">La vignette de l\'appareil photo sera remplacée par un bouton flottant. Appuyer dessus lance l\'appareil photo de Telegram ; le maintenir enfoncé lance l\'appareil photo système.</string>
+    <string name="HideCameraTileInfo">La vignette de l\'appareil photo sera remplacée par un bouton flottant. Appuyer dessus lance l\'appareil photo de RoqiGram ; le maintenir enfoncé lance l\'appareil photo système.</string>
     <!-- Playback -->
     <string name="DoubleTapSeekDuration">Temps de saut en double tap</string>
     <string name="PreferOriginalQuality">Privilégier la qualité d\'origine</string>
@@ -510,7 +510,7 @@
     <string name="EmojiSavedHint">Émoji enregistré dans la galerie.</string>
     <string name="GifGallerySavedHint">GIF enregistré dans la galerie.</string>
     <string name="MutualContactInfo">Ce contact est mutuel.</string>
-    <string name="LocalPremiumEmojiHint">Vous n\'avez pas d\'abonnement **Telegram Premium**, donc seuls les utilisateurs de **RoqiGram** pourront voir cet émoji.</string>
+    <string name="LocalPremiumEmojiHint">Vous n\'avez pas d\'abonnement **RoqiGram Premium**, donc seuls les utilisateurs de **RoqiGram** pourront voir cet émoji.</string>
     <!-- Main Tabs -->
     <string name="HideContactsTab">Masquer l\'onglet Contacts</string>
     <string name="ShowContactsTab">Afficher l\'onglet Contacts</string>
