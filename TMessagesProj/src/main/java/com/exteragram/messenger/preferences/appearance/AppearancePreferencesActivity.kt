@@ -27,6 +27,7 @@ import com.exteragram.messenger.appicons.ui.AppIconsActivity
 import com.exteragram.messenger.icons.ui.IconPacksActivity
 import com.exteragram.messenger.pillstack.ui.PillStackPreferencesActivity
 import com.exteragram.messenger.roqi.RoqiPremium
+import com.exteragram.messenger.roqi.RoqiProfileDecor
 import com.exteragram.messenger.preferences.BasePreferencesActivity
 import com.exteragram.messenger.preferences.SwitchGroup
 import com.exteragram.messenger.preferences.appearance.components.AvatarCornersPreviewCell
@@ -79,6 +80,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
         APP_NAVIGATION_SETTINGS,
         APP_ICON,
         ROQI_PREMIUM,
+        ROQI_PROFILE,
         ICON_PACKS,
         FAB_SHAPE,
         SECTION_RADIUS,
@@ -215,6 +217,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
             }
         )
         items.add(uButton(AppearanceItem.ROQI_PREMIUM, "RoqiGram Premium", R.drawable.msg_sticker, subtext = RoqiPremium.statusText(), linkAlias = "roqiPremium"))
+        items.add(uButton(AppearanceItem.ROQI_PROFILE, "RoqiGram Profile", R.drawable.msg_sticker, subtext = "Баннер и музыкальная волна", linkAlias = "roqiProfile"))
         items.add(uButton(AppearanceItem.ICON_PACKS, getString(R.string.IconPacks), R.drawable.msg_sticker, subtext = getString(R.string.IconPacksInfo), linkAlias = "iconPacks"))
         items.add(uButton(AppearanceItem.PILL_STACK, getString(R.string.PillStackPills), R.drawable.outline_header_search, subtext = getString(R.string.PillStackPillsInfo), linkAlias = "pillStack"))
         items.add(UItem.asShadow())
@@ -300,6 +303,7 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
             AppearanceItem.APP_NAVIGATION_SETTINGS -> presentFragment(AppNavigationPreferencesActivity())
             AppearanceItem.APP_ICON -> presentFragment(AppIconsActivity())
             AppearanceItem.ROQI_PREMIUM -> showRoqiPremiumDialog()
+            AppearanceItem.ROQI_PROFILE -> showRoqiProfileDialog()
             AppearanceItem.ICON_PACKS -> presentFragment(IconPacksActivity())
             AppearanceItem.SEPARATED_HEADERS -> {
                 if (dividerStyle == DividerStyle.SEGMENTS) return
@@ -523,6 +527,27 @@ class AppearancePreferencesActivity : BasePreferencesActivity() {
             .setPositiveButton("Копировать") { _, _ ->
                 val cm = ctx.getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
                 cm.setPrimaryClip(android.content.ClipData.newPlainText("RoqiGram", text))
+            }
+            .setNegativeButton("OK", null)
+            .show()
+    }
+
+    private fun showRoqiProfileDialog() {
+        val ctx = context ?: return
+        val banner = RoqiProfileDecor.bannerEnabled(ctx)
+        val music = RoqiProfileDecor.musicEnabled(ctx)
+        AlertDialog.Builder(ctx)
+            .setTitle("RoqiGram Profile")
+            .setMessage(
+                "Баннер: Download/roqi_banner.jpg\n" +
+                "Музыка: Download/roqi_music.txt (строка 1 — название, строка 2 — исполнитель)\n\n" +
+                "Видно только пользователям RoqiGram."
+            )
+            .setPositiveButton(if (banner) "Баннер: вкл (нажмите чтобы выкл)" else "Баннер: выкл (нажмите чтобы вкл)") { _, _ ->
+                RoqiProfileDecor.setBannerEnabled(ctx, !banner)
+            }
+            .setNeutralButton(if (music) "Музыка: вкл (нажмите чтобы выкл)" else "Музыка: выкл (нажмите чтобы вкл)") { _, _ ->
+                RoqiProfileDecor.setMusicEnabled(ctx, !music)
             }
             .setNegativeButton("OK", null)
             .show()
